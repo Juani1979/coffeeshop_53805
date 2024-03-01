@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    line-height: 1;
+    color: #553d2a;
+}
+
+.header{
+    background-color: #553d2a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logoPrincipal{
+    width: 170px;
+}
+
+.navbar-toggler:hover {
+    border-color:#553d2a;
+}
+.navbar-toggler:focus {
+    color: transparent;
+}
+  
+.navbar-toggler-icon {
+    color: #fff9e1;
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+.navbar-nav{
+    column-gap: 5px;
+}
+
+.nav-item{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav-link{
+    color: #fff9e1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 7px;
+}
+
+.nav-link:hover{
+    color: #fff9e1;
+    border-bottom: 2px solid #fff9e1;
+    margin-bottom: -2px;
+}
+
+.seccionTitulo{
+    height: 100vh;
+    background: url("../assets/img/fondo_principal.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding-left: 6%;
+    padding-top: 6%;
+    display: block;
+    color:#fff9e1;
+    .tituloPrincipal{
+        font-size: 4.5rem;
+        font-weight: 700;
+    }
+    .tituloSecundario{
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .seccionTitulo{
+        background-image: url("../assets/img/fondo_principal_peq.jpg");
+        .tituloPrincipal{
+            font-size: 3.5rem;
+        }
+        .tituloSecundario{
+            font-size: 1.8rem;
+        }     
+    }
+}
+.linkDescubrir{
+    box-sizing: content-box;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
+    width: 140px;
+    color: #fff9e1;
+    text-decoration: none;
+    border: 1px solid #fff9e1;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 10px;
+    padding: 18px 15px 15px 15px;
+    margin-top:10px;
+    transition: transform 0.3s ease;
+}
+.linkDescubrir:hover{
+    background-color: #553d2a;
+    color: #fff9e1;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 768px){
+    .linkDescubrir{
+        width: 120px;
+        font-size: 1.2rem;
+        padding: 18px 15px 15px 15px;
+    }
+}
+
+.tituloSeccion{
+    color: #553d2a;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 50px;
+}
+
+.lineaTitulos{
+    width: 120px;
+    border: 2px solid #553d2a;
+    border-radius: 12px;
+    margin: 10px auto 50px auto;
+    text-align: center
+}
+
+.divSeparador{
+    height: 50px;
+}
+
+.seccionCards{
+    width: 75%;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    .card{
+        height: auto;
+        background-color: #e3d7bf;
+        border-radius: 12px;
+        border-color: #e3d7bf;
+        margin: 80px 10px 80px 10px;
+        padding: 25px 20px 10px 20px;
+        text-align: center;
+        .card-img-top{
+            width: 100%;
+            height: 240px;
+            border-radius: 12px;
+            margin-top: -50px; 
+        }
+        .card-body{
+            .card-title{
+                color: #553d2a;
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            .card-text{
+                font-size: 1rem;
+                color: #553d2a;
+                font-weight: 500;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .linkCard{
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0);
+                width: 100px;
+                color: #553d2a;
+                text-decoration: none;
+                border: 1px solid #553d2a;
+                border-radius: 25px;
+                font-size: 1rem;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .linkCard:hover{
+                background-color: #553d2a;
+                color: #fff9e1;
+            }
+        }
+    }
+}
+
+.seccionBarista{
+    background-color: #e3d7bf;
+    padding-bottom: 50px;
+    .imgBarista{
+        object-fit: cover;
+        border-radius: 12px;
+        margin-top: 30px;
+    }
+    .tituloBarista{
+        font-size: 1.7rem;
+        color: #553d2a;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .txtBarista{
+        font-size: 1.1rem;
+        color: #553d2a;
+        font-weight: normal;
+        text-align: left;
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+}
+
+.cardComentario{
+    height: auto;
+    background-color: #e3d7bf27;
+    border: 1px solid #553d2a;
+    border-radius: 12px;
+    border-color:#553d2a;
+    margin: 50px 5px 50px 5px;
+    padding: 25px 0px 10px 0px;
+    object-fit: center;
+}
+@media screen and (max-width: 768px){
+    .cardComentarioContainer{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}  
+.imgComentario{
+    object-fit: center;
+    width: 40%;
+    height: 40%;
+    box-shadow: 2px 2px 2px 1px rgba(85, 61, 42, 0.349);
+    margin-top: -55px;
+}
+.tituloComentario{
+    font-size: 1.7rem;
+    color: #553d2a;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.subtituloComentario{
+    font-size: 1.1rem;
+    color: #553d2a;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.txtComentario{
+    font-size: 0.9rem;
+    color: #553d2a;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.fa-whatsapp{
+    color:#25D366;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transition: transform 0.3s ease;
+} 
+.fa-whatsapp:hover {
+    transform: scale(1.2);
+}
