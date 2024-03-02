@@ -6,117 +6,150 @@
         <title>Contacto | COFFEE SHOP</title>
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
     </head>
     <body>
         <header class="header">
-            <a class="padreLogo" href="../index.html">
-                <img class="logoPrincipal" src="../assets/img/logo_coffeeShop.png" alt="COFFEE SHOP">
-            </a>
-           
-            <nav class="navegacion">
-                <ul class="listaNav">
-                   <li class="listaItem"><a class="linkNav" href="../index.html">Inicio</a></li>
-                   <li class="listaItem"><a class="linkNav" href="nosotros.html">Nosotros</a></li>
-                   <li class="listaItem"><a class="linkNav" href="cafeteria.html">Cafetería</a></li>
-                   <li class="listaItem"><a class="linkNav" href="cafeteria.html#secSeparador">Cápsulas de Café</a></li>
-                   <li class="listaItem"><a class="linkNav" href="pasteleria.html">Pastelería</a></li>
-                   <li class="listaItem"><a class="linkNav" href="contacto.html">Contacto</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img class="logoPrincipal" src="../assets/img/logo_coffeeShop.png" alt="COFFEE SHOP" title="CoffeeShop"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cafetería
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/cafeteria.html">Café & Especialidades</a></li>
+                                <li><a class="dropdown-item" href="../pages/cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/pasteleria.html">Pastelería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
+
         <main class="mainIndex">
             <section class="seccionContacto" id="seccionContacto">
-                <h2 class="tituloSeccionContacto">CONTACTO</h2>
+                <h2 class="tituloSeccion">CONTACTO</h2>
                 <hr class="lineaTitulos"/>
 
-                <div class="containerFlexCont">
-                    <div class="itemFlexContIzq">
-                        <img class="imgContacto" src="../assets/img/foto_contacto.jpg" alt="Dejanos tu mensaje">
-                    </div>
-                    <div class="itemFlexContDer">
-                        <h2 class="tituloContacto">Dejanos tu mensaje</h2>
-
-                        <form class="formularioContacto" action="404.html" method="post">
-                            <label class="txtEtiqueta" for="nombre">Nombre: </label><br>
-                            <input class="txtCampo" type="text" id="nombre" name="nombre" required><br>
-                            <label class="txtEtiqueta" for="email">Email: </label><br>
-                            <input class="txtCampo" type="email" placeholder="ejemplo@coffeeshop.com" required id="email" name="email"><br>
-                            <label class="txtEtiqueta" for="telefono">Teléfono: </label><br>
-                            <input class="txtCampo" type="text" id="telefono" name="telefono" required><br>
-                            <label class="txtEtiqueta" for="mensaje">Mensaje: </label><br>
-                            <textarea class="txtCampo" id="mensaje" name="mensaje" placeholder="Completá tu mensaje..." rows="4" required></textarea><br>
-                            <div class="divBotones">
-                                <input class="botonForm" type="reset" value="Borrar">
-                                <input class="botonForm" type="submit" value="Enviar">
-                            </div>
-                        </form>                        
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-6 text-center">
+                            <img class="imgContacto" src="../assets/img/foto_contacto.jpg" alt="Dejanos tu mensaje" title="Dejanos tu mensaje">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h2 class="tituloContacto">Dejanos tu mensaje</h2>
+                            <form class="formularioContacto" action="404.html" method="post">
+                                <label class="txtEtiqueta" for="nombre">Nombre</label><br>
+                                <input class="txtCampo" type="text" id="nombre" name="nombre" required><br>
+                                <label class="txtEtiqueta" for="email">Email</label><br>
+                                <input class="txtCampo" type="email" placeholder="ejemplo@coffeeshop.com" required id="email" name="email"><br>
+                                <label class="txtEtiqueta" for="telefono">Teléfono</label><br>
+                                <input class="txtCampo" type="text" id="telefono" name="telefono" required><br>
+                                <label class="txtEtiqueta" for="mensaje">Mensaje</label><br>
+                                <textarea class="txtCampo" id="mensaje" name="mensaje" placeholder="Completá tu mensaje..." rows="4" required></textarea><br>
+                                <div class="divBotones">
+                                    <input class="botonForm" type="reset" value="Borrar">
+                                    <input class="botonForm" type="submit" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="seccionUbicacion" id="seccionUbicacion">
-                <h2 class="tituloSeccionUbicacion">UBICACIÓN</h2>
+            <<section class="seccionUbicacion" id="seccionUbicacion">
+                <h2 class="tituloSeccion">UBICACIÓN</h2>
                 <hr class="lineaTitulos"/>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.011300354512!2d-58.41356462350348!3d-34.60387575750778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses!2sar!4v1707572341436!5m2!1ses!2sar" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.011300354512!2d-58.41356462350348!3d-34.60387575750778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses!2sar!4v1707572341436!5m2!1ses!2sar" width="100%" height="320" style="border:0; margin-bottom: -50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
             
             <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
         </main>
 
-        <section class="seccionSuscripcion" id="suscribirse">
-            <h4 class="tituloFooterSuscripcion">Recibi todas nuestras<br><span class="tituloFooterSuscripcion1">PROMOCIONES Y NOVEDADES</span></h4>
-            <form action="404.html" method="post">
-                <input type="email" placeholder="Ingresa tu dirección de email" required id="email" name="email">
-                <input type="submit" value="Suscribite">
-            </form>
-        </section>
+        <div class="seccionSuscripcion">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h4 class="tituloFooterSuscripcion">Recibi todas nuestras<br><span class="tituloFooterSuscripcion1">PROMOCIONES Y NOVEDADES</span></h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form action="404.html" method="post">
+                            <div class="form-group">
+                                <input type="email" placeholder="Ingresa tu dirección de email" id="email" name="email" required >
+                                <input type="submit" value="Suscribite">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footerPrincipal">
-            <section class="footer">
-                <section id="direccion">
-                    <a href="index.html">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-3 footerCol">
+                    <a href="../index.html">
                         <img class="logoFotter" src="../assets/img/logo_coffeeShop_bco.png" alt="COFFEE SHOP" loading="lazy">
                     </a>
                     <p class="txtFooter">ABASTO SHOPPING</p>
                     <p class="txtFooter1">Avenida Corrientes 3247, Lavalle 3120<br>C1193 DF - Buenos Aires - Argentina<br>Teléfono: 0800-222-2299</p>
-                </section>
-            
-                <nav id="coffeeShop">
-                    <h4 class="tituloFooter">COFFEE SHOP</h4>
-                    <ul class="listaNavFooter">
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="../index.html">Inicio</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="nosotros.html">Nosotros</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html">Cafetería</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html#secSeparador">Cápsulas de Café</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="pasteleria.html">Pastelería</a></li>
-                    </ul>
-                </nav>
-                
-                <nav id="ayuda">
-                    <h4 class="tituloFooter">¿NECESITÁS AYUDA?</h4>
-                    <ul class="listaNavFooter">
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Convertite en Barista</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Franquicias</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Trabaja con Nosotros</a></li>
-                    <li class="listaItemFooter"><a class="linkNavFooter" href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-
-                <section id="redes">
-                    <h4 class="tituloFooter">SEGUINOS EN LAS REDES</h4>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="coffeeShop">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">COFFEE SHOP</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="../index.html">Inicio</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="nosotros.html">Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html">Cafetería</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="pasteleria.html">Pastelería</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="ayuda">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">¿NECESITÁS AYUDA?</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Convertite en Barista</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Franquicias</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Trabaja con Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12  col-md-3 footerCol">
+                    <h4 class="tituloFooterSocial">SEGUINOS EN LAS REDES</h4>
                     <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-square-whatsapp iconoSocial"></i></a>
                     <a href="https://www.facebook.com/" target="_blank" title="Facebook | CoffeeShop"><i class="fa-brands fa-square-facebook iconoSocial"></i></i></a>
                     <a href="https://www.instagram.com/" target="_blank" title="Instagram | CoffeeShop"><i class="fa-brands fa-square-instagram iconoSocial"></i></i></a>
                     <a href="https://www.youtube.com/" target="_blank" title="Youtube | CoffeeShop"><i class="fa-brands fa-youtube iconoSocial"></i></a>
-                </section>
-            </section>
+                </div>
+              </div>
+            </div>
         </footer>
-
-        <section class="copyright">
-            <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>
-                Juan Ignacio Romano | CODERHOUSE - Comisión 53805
-            </p>
-        </section>
+        <div class="container-fluid copyright text-center">
+            <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
+        </div>
+        <script src="../js/bootstrap.bundle.js"></script>
     </body>
 </html>
