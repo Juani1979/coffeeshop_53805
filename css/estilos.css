@@ -394,8 +394,7 @@ body {
             font-size: 16px;
             text-align: center;
             padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 20px;
+            margin: 5px 5px 20px 5px;
         }
         .linkCardCafe:hover{
             background-color: #553d2a;
@@ -411,8 +410,57 @@ body {
     }
 }
 
-
-
+.offcanvas {
+    background-color:#e3d7bf;
+  }
+.offcanvas-header {
+    font-size: 1.3rem;
+}
+.offcanvas-imagen{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.off-canvas-tituloCard{
+    font-size: 2.1em;
+    color: #553d2a;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px 15px 15px;
+}
+.off-canvas-tituloCardCafe{
+    font-size: 1.8rem;
+    color: #553d2a;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 0px 5px 15px;
+}
+.off-canvas-txtCardCafe{
+    font-size: 1.2rem;
+    color: #553d2a;
+    font-weight: normal;
+    line-height: 1.3rem;
+    text-align: justify;
+    margin: 10px 15px 20px 15px;
+}
+.off-canvas-productoNuevo{
+    width: 24%;
+    position: absolute;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    background-color:#e7190b;
+    color: #fff9e1;
+    padding: 7px 0px 7px 0px;
+    border-radius: 12px;
+    top: 425px;
+    left: 255px;
+}
+@media screen and (max-width: 768px){
+    .off-canvas-productoNuevo{
+        display: none;
+    }
+}
+ 
 .seccionSuscripcion{
     background-image: url("../assets/img/fondo_suscripcion.jpg");
     background-size: cover;
