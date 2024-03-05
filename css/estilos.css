@@ -61,15 +61,15 @@ body {
 .dropdown-item {
     padding: 0.8rem 0.8rem;
     color: #553d2a;
-  }
-  .dropdown-item:hover, .dropdown-item:focus {
+}
+.dropdown-item:hover, .dropdown-item:focus {
     color: #553d2a;
     background-color: #e3d7bf;
-  }
-  .dropdown-item.active, .dropdown-item:active {
+}
+.dropdown-item.active, .dropdown-item:active {
     color: #fff9e1;
     background-color: #553d2a;
-  }
+}
 
 .seccionTitulo{
     height: 100vh;
@@ -332,6 +332,19 @@ body {
             border-bottom-left-radius: 12px;
             top: 18px;
             left: 244px;
+        }
+        .productoUltimos .fa-mug-hot{
+            width: 38%;
+            position: absolute;
+            font-size: 0.5rem;
+            letter-spacing: 0.06rem;
+            background-color:#553d2a;
+            color: #ffee00;
+            padding: 6px 0px 6px 0px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            top: 47px;
+            left: 210px;
         }         
         .imgCardCafe{
             width: 100%;
@@ -412,7 +425,7 @@ body {
 
 .offcanvas {
     background-color:#e3d7bf;
-  }
+}
 .offcanvas-header {
     font-size: 1.3rem;
 }
@@ -631,8 +644,7 @@ body {
                          "grilla2 grilla3"
                          "grilla4 grilla3"
                          "grilla4 grilla5";
-    gap: 30px;
-    
+    gap: 30px;   
     .g1{
         grid-area: grilla1;
         img{
@@ -795,7 +807,6 @@ body {
     }
 }
 
-
 .fa-whatsapp{
     color:#25D366;
     font-size: 3rem;
@@ -809,9 +820,6 @@ body {
 }
 
 .imgError{
-    /*object-fit: cover;
-    border-radius: 12px;
-    margin-top: 30px;*/
     width: 270px;
     height: auto;
     border-radius: 12px;
@@ -898,33 +906,33 @@ body {
         margin-bottom: 10px;
     }
     .txtFooter{
-            font-size: 1.1rem;
-            color:#553d2a;
-            font-weight: bold;
-            text-align: left;
-            margin-top: 10px;
-            margin-bottom: 10px;
+        font-size: 1.1rem;
+        color:#553d2a;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .txtFooter1{
-            font-size: 1rem;
-            color:#553d2a;
-            font-weight: normal;
-            text-align: left;
-            margin-top: 10px;
-            margin-bottom: 10px;
+        font-size: 1rem;
+        color:#553d2a;
+        font-weight: normal;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .tituloFooterSocial{
-            font-size: 1.3rem;
-            color: #553d2a;
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 10px;
+        font-size: 1.3rem;
+        color: #553d2a;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
     }
     .iconoSocial{
-            color:#fff9e1;
-            font-size: 28px;
-            margin: 7px;
-            text-align: left;
+        color:#fff9e1;
+        font-size: 28px;
+        margin: 7px;
+        text-align: left;
     }
 }
 @media screen and (max-width: 768px){
