@@ -326,11 +326,6 @@ body {
         border-color: #e3d7bf;
         margin: 20px 10px 20px 10px;
         text-align: center;
-        /*width: 340px;
-        height: auto;
-        background-color: #e3d7bf;
-        border-radius: 12px;
-        margin-bottom: 40px;*/
         position: relative;
         .productoNuevo .fa-star{
             width: 28%;
@@ -819,6 +814,20 @@ body {
             width: initial;
         }
     }
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+    color:#553d2a;
+}
+.accordion-button:not(.collapsed) {
+    color:#e3d7bf;
+    background-color:#553d2a;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+.accordion-button:focus {
+    border-color: #e3d7bf;
+    box-shadow: 0 0 0 0.25rem rgba(216, 210, 203, 0.363);
 }
 
 .fa-whatsapp{
