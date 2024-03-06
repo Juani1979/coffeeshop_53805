@@ -312,13 +312,25 @@ body {
     width: 80%;
     margin: 50px auto 50px auto;
     text-align: center;
-    .cardCafe{
-        display: inline-block;
-        width: 340px;
+    .col-cardCafe{
+        background-color: rgb(122, 247, 247);
+        padding-top: 2%;
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        border: 1px solid #08ec2e;
+    }
+    .cardCafe{        
         height: auto;
         background-color: #e3d7bf;
         border-radius: 12px;
-        margin-bottom: 40px;
+        border-color: #e3d7bf;
+        margin: 20px 10px 20px 10px;
+        text-align: center;
+        /*width: 340px;
+        height: auto;
+        background-color: #e3d7bf;
+        border-radius: 12px;
+        margin-bottom: 40px;*/
         position: relative;
         .productoNuevo .fa-star{
             width: 28%;
@@ -327,24 +339,24 @@ body {
             letter-spacing: 0.05rem;
             background-color:#e7190b;
             color: #fff9e1;
+            margin: 0px 5px 0px 5px;
             padding: 7px 0px 7px 0px;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
-            top: 18px;
-            left: 244px;
+            border-radius: 12px;
+            top: 5%;
+            left: 64%;
         }
         .productoUltimos .fa-mug-hot{
-            width: 38%;
+            width: 45%;
             position: absolute;
             font-size: 0.5rem;
             letter-spacing: 0.06rem;
             background-color:#553d2a;
             color: #ffee00;
-            padding: 6px 0px 6px 0px;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            top: 47px;
-            left: 210px;
+            margin: 0px 5px 0px 5px;
+            padding: 7px 0px 7px 0px;
+            border-radius: 12px;
+            top: 5%;
+            left: 46%;
         }         
         .imgCardCafe{
             width: 100%;
@@ -418,8 +430,10 @@ body {
         box-shadow: 0px 0px 14px -3px rgba(85,61,42,0.83);
         .productoNuevo .fa-star{
             font-size: 0.8rem;
-            left: 245px;
-        }  
+        }
+        .productoUltimos .fa-mug-hot{
+            font-size: 0.6rem;
+        }   
     }
 }
 
