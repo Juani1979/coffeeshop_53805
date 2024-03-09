@@ -78,7 +78,6 @@
             </section>
 
             <section id="secSeparador">
-                <div class="divSeparador"></div>
             </section>
 
             <section class="seccionPreguntas" id="seccionPreguntas">
@@ -151,6 +150,7 @@
             </section>
             
             <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <button id="btnIrArriba" title="Ir arriba">↑</button>
         </main>
 
         <div class="seccionSuscripcion">
@@ -218,5 +218,27 @@
             <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
         </div>
         <script src="../js/bootstrap.bundle.js"></script>
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            window.onscroll = function() {
+                mostrarBotonIrArriba();
+            };
+
+            function mostrarBotonIrArriba() {
+                var botonIrArriba = document.getElementById("btnIrArriba");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    botonIrArriba.style.display = "block";
+                } else {
+                    botonIrArriba.style.display = "none";
+                }
+            }
+
+            document.getElementById("btnIrArriba").addEventListener("click", function() {
+                document.body.scrollTop = 0; // Para navegadores Safari
+                document.documentElement.scrollTop = 0; // Para otros navegadores
+            });
+        </script>
     </body>
 </html>

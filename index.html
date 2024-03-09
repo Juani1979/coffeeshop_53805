@@ -140,6 +140,58 @@
                 </div>
             </section>
 
+            <section class="seccionTarjetasX2">
+                <h2 class="tituloSeccion">LO MEJOR PARA VOS</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="card mb-3"> 
+                                <div class="row g-0"> 
+                                    <div class="col-md-6"> 
+                                        <img src="./assets/img/foto_pedido.jpg" class="img-fluid rounded-start" alt="CoffeeShop"> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="card-body"> 
+                                            <p class="card-title">¿Cómo hacer tu pedido?</p> 
+                                            <p class="card-text mb-2"> 
+                                                Ingresá a nuestra plataforma de forma fácil y rápida para realizar tus pedidos. Sigue sencillos pasos y explora nuestro catálogo de productos.  
+                                            </p>
+                                            <div class="text-center align-items-end"> 
+                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Hacer mi Pedido</a>
+                                            </div>
+                                        </div>
+                                         
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>             
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="card mb-3"> 
+                                <div class="row g-0"> 
+                                    <div class="col-md-6"> 
+                                        <img src="./assets/img/foto_patry.jpg" class="img-fluid rounded-start" alt="CoffeeShop"> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="card-body"> 
+                                            <p class="card-title">¿Te gustan los Macarons?</p> 
+                                            <p class="card-text mb-2"> 
+                                                Descubre nuestras deliciosas opciones y encuentra el pack perfecto para llevar. Desde clásicos sabores hasta creaciones exclusivas, nuestros Macarons te sorprenderán. Además, aprovecha nuestras increíbles promociones que harán que tu experiencia sea aún más dulce.  
+                                            </p>
+                                            <div class="text-center align-items-end"> 
+                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Comprar Packs</a>
+                                            </div>
+                                        </div>
+                                         
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="seccionComentario" id="seccionComentario">
                 <h2 class="tituloSeccion">EXPERIENCIAS</h2>
                 <hr class="lineaTitulos"/>
@@ -191,6 +243,7 @@
             </section>
 
             <a href="./pages/404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <button id="btnIrArriba" title="Ir arriba">↑</button>
         </main>
 
         <div class="seccionSuscripcion">
@@ -258,5 +311,27 @@
             <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
         </div>
         <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            window.onscroll = function() {
+                mostrarBotonIrArriba();
+            };
+
+            function mostrarBotonIrArriba() {
+                var botonIrArriba = document.getElementById("btnIrArriba");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    botonIrArriba.style.display = "block";
+                } else {
+                    botonIrArriba.style.display = "none";
+                }
+            }
+
+            document.getElementById("btnIrArriba").addEventListener("click", function() {
+                document.body.scrollTop = 0; // Para navegadores Safari
+                document.documentElement.scrollTop = 0; // Para otros navegadores
+            });
+        </script>
     </body>
 </html>
