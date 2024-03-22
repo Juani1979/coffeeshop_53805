@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COFFEE SHOP</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <header class="header position-sticky top-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="logoPrincipal" src="./assets/img/logo_coffeeShop.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                            <li class="nav-item text-center">
+                                <a class="nav-link active colorClaroActive" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item text-center dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cafetería
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./pages/cafeteria.html">Café & Especialidades</a></li>
+                                    <li><a class="dropdown-item" href="./pages/cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="./pages/pasteleria.html">Pastelería</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <script>
+                function move() {
+                  var elem = document.getElementById("myBar");
+                  var width = 1;
+                  var id = setInterval(frame, 10);
+                  function frame() {
+                    if (width >= 100) {
+                      clearInterval(id);
+                      setTimeout(function() {
+                        elem.style.display = 'none';
+                      }, 1000);
+                    } else {
+                      width++;
+                      elem.style.width = width + '%';
+                    }
+                  }
+                }
+                window.onload = function() {
+                  move();
+                };
+            </script>
+        </header>
+        <main>
+            <section class="seccionTitulo d-flex d-md-flex flex-column">
+                <h1 class="tituloPrincipal">Despertá tus sentidos</h1>
+                <p class="tituloSecundario">¡Tentate con nuestros sabores!</p>
+                <a class="linkDescubrir rounded-pill text-center" href="#secSeparador">DESCUBRILOS AQUÍ</a>
+            </section>
+
+            <section id="secSeparador">
+                <div class="divSeparador"></div>
+            </section>
+            
+            <section class="seccionCards" id="seccionCards">
+                <h2 class="tituloSeccion">NUESTROS PRODUCTOS</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/img/foto_cafeteria.jpg" class="card-img-top" alt="Ingresá la Cafetería">
+                                <div class="card-body">
+                                  <h4 class="card-title">Cafetería</h4>
+                                  <p class="card-text">Un lugar, donde cada taza cuenta una historia. <br>Disfruta de aromáticos cafés y de un ambiente cálido para compartir momentos especiales. Contamos con un ambiente relajado para que puedas relajarte, trabajar ó estudiar.</p>
+                                  <a class="linkCard rounded-pill text-center" href="./pages/cafeteria.html">Ingresar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/img/foto_pasteleria.jpg" class="card-img-top" alt="Ingresá a la Pasteleria">
+                                <div class="card-body">
+                                  <h4 class="card-title">Pastelería</h4>
+                                  <p class="card-text">Sumergite en un mundo de delicias dulces en nuestra pastelería. Desde exquisitos pasteles hasta tentadores postres, cada bocado es una experiencia única. Descubre la mezcla perfecta de sabores y texturas que harán que vuelvas por más.</p>
+                                  <a class="linkCard rounded-pill text-center" href="./pages/pasteleria.html">Ingresar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/img/foto_capsulas.jpg" class="card-img-top" alt="Ingresá a las Cápsulas de Café">
+                                <div class="card-body">
+                                  <h4 class="card-title">Cápsulas de Café</h4>
+                                  <p class="card-text">Explora la variedad de aromas y sabores en cada cápsula de café. Nuestras cápsulas cuidadosamente seleccionadas ofrecen una experiencia de café excepcional en la comodidad de tu hogar. Descubre una nueva dimensión en el arte del café con nuestras exclusivas mezclas.</p>
+                                  <a class="linkCard rounded-pill text-center" href="./pages/cafeteria.html#secSeparador">Ingresar</a>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="seccionBarista" id="seccionBarista">
+                <h2 class="tituloSeccion">HACÉ TU MEJOR ESPRESSO</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-6 text-center">
+                            <img class="imgBarista w-50 h-100" src="./assets/img/cafe_espresso.jpg" alt="Hacé tu mejor Espresso - Receta" title="Hacé tu mejor Espresso">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4 class="tituloBarista">Receta para una taza</h4>
+                            <p class="txtBarista">
+                                Café: <b>10 gramos</b><br>                    
+                                Agua: <b>40 ml.</b><br>
+                                Relación de café/agua: <b>1:4 g/ml.</b><br>
+                                Tamaño de molienda: <b>fina</b><br>
+                                Tiempo de preparación: <b>1 minuto</b><br><br>
+                            </p>
+                            <h4 class="tituloBarista">Seguí estos pasos</h4>
+                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 1</b></p>
+                            <p class="txtBarista">A moler el café! Hay que tener en cuenta que si la molienda es muy gruesa el agua pasará demasiado rápido, obteniendo entonces un café de baja extracción con sabores poco definidos, plano/vacio y sin retrogusto.<br>
+                            Por el contrario, si se muele demasiado fino se compactará y el agua casi no podrá pasar, dando lugar a un café sobre extraído que resultará amargo, seco, astringente.<br>
+                            Un buen molido para espresso debería permitir extraer una taza de café en 25 segundos.</p><br>
+                            
+                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 2</b></p>
+                            <p class="txtBarista">Una vez molido el café, utilizá el tamper para comprimirlo y que quede homogéneo en el portafiltro.<br>
+                            No es necesario presionar increíblemente fuerte, solo lo suficiente para sellar el café de manera uniforme.<br>
+                            Podés darle al tamper un giro suave. Esto suavizará o "pulirá" la base para una extracción homogénea.</p><br>
+                            
+                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 3</b></p>
+                            <p class="txtBarista">Colocá el portafiltro en la cafetera. Previo a extraer el café, "purgar" el grupo permitiendo quitar el agua sobrecalentada. Si seguiste todos los pasos anteriores, a los pocos segundos empezarás a ver las primeras gotas de café.</p><br>
+                            
+                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 4</b></p>
+                            <p class="txtBarista">Estas primeras gotas deberán tener un color avellana y una textura como la miel, denominada crema que aparece en la superficie adornando tu café.<br>
+                            Al moverla y cortarla con la cuchara, se cierra de nuevo ella misma.<br>
+                            Tardarás aproximadamente 25 segundos para obtener el espresso perfecto.</p><br>
+                            
+                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 5</b></p>
+                            <p class="txtBarista">Ahora si ya podemos disfrutar de nuestro café!!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccionTarjetasX2">
+                <h2 class="tituloSeccion">LO MEJOR PARA VOS</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="card mb-3"> 
+                                <div class="row g-0"> 
+                                    <div class="col-md-6"> 
+                                        <img src="./assets/img/foto_pedido.jpg" class="img-fluid rounded-start" alt="Ingresá a Nuestra Plataforma de CoffeeShop"> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="card-body"> 
+                                            <p class="card-title">¿Cómo hacer tu pedido?</p> 
+                                            <p class="card-text mb-2"> 
+                                                Ingresá a nuestra plataforma de forma fácil y rápida para realizar tus pedidos. Sigue sencillos pasos y explora nuestro catálogo de productos.  
+                                            </p>
+                                            <div class="text-center align-items-end"> 
+                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Hacer mi Pedido</a>
+                                            </div>
+                                        </div>
+                                         
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>             
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="card mb-3"> 
+                                <div class="row g-0"> 
+                                    <div class="col-md-6"> 
+                                        <img src="./assets/img/foto_patry.jpg" class="img-fluid rounded-start" alt="Descubrí nuestras opciones de Macarons"> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="card-body"> 
+                                            <p class="card-title">¿Te gustan los Macarons?</p> 
+                                            <p class="card-text mb-2"> 
+                                                Descubre nuestras deliciosas opciones y encuentra el pack perfecto para llevar. Desde clásicos sabores hasta creaciones exclusivas, nuestros Macarons te sorprenderán. Además, aprovecha nuestras increíbles promociones que harán que tu experiencia sea aún más dulce.  
+                                            </p>
+                                            <div class="text-center align-items-end"> 
+                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Comprar Packs</a>
+                                            </div>
+                                        </div>
+                                         
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccionComentario" id="seccionComentario">
+                <h2 class="tituloSeccion">EXPERIENCIAS</h2>
+                <hr class="lineaTitulos"/>
+               
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-3 text-center cardComentarioContainer"> 
+                            <div class="cardComentario">
+                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_maria.jpg" alt="Foto de nuestro Usuario">
+                                <div class="card-body">
+                                  <p class="tituloComentario">María</p>
+                                  <p class="subtituloComentario">Amante del Café y los Postres</p>
+                                  <p class="txtComentario">¡Una experiencia deliciosa en cada visita! El café es excepcional, y los pasteles son una obra maestra. Siempre encuentro un ambiente acogedor y el personal es amable. Sin duda, mi lugar favorito para disfrutar de un buen café y un postre delicioso.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 text-center cardComentarioContainer">
+                            <div class="cardComentario">
+                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_carlos.jpg" alt="Foto de nuestro Usuario">
+                                <div class="card-body">
+                                    <p class="tituloComentario">Carlos</p>
+                                    <p class="subtituloComentario">Fanático de los Sabores Únicos</p>
+                                    <p class="txtComentario">Increíble variedad de cafés y pastelería. Cada taza de café es única, y los pasteles son tan frescos y deliciosos que es difícil elegir solo uno. El personal es conocedor y siempre me recomiendan combinaciones sorprendentes. ¡Una experiencia gastronómica que nunca decepciona!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 text-center cardComentarioContainer">
+                            <div class="cardComentario">
+                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_ana.jpg" alt="Foto de nuestro Usuario">
+                                <div class="card-body">
+                                    <p class="tituloComentario">Ana</p>
+                                    <p class="subtituloComentario">Lugar Perfecto para Reuniones</p>
+                                    <p class="txtComentario">Este lugar se ha convertido en mi punto de encuentro favorito. La atmósfera es relajada, el café es excelente y las opciones de pastelería son irresistibles. Ya sea para una reunión de trabajo o una charla informal con amigos, este es el lugar perfecto. ¡Recomiendo probar el pastel de chocolate!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 text-center cardComentarioContainer">
+                            <div class="cardComentario">
+                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_javier.jpg" alt="Foto de nuestro Usuario">
+                                <div class="card-body">
+                                    <p class="tituloComentario">Javier</p>
+                                    <p class="subtituloComentario">Cliente Frecuente y Satisfecho</p>
+                                    <p class="txtComentario">Como cliente frecuente, siempre me impresiona la consistencia en la calidad. El café es robusto y aromatico, y los pasteles son simplemente deliciosos. Además, el servicio es rápido y amable. Definitivamente, mi elección número uno para disfrutar de un buen café y algo dulce.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <a href="./pages/404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <button id="btnIrArriba" title="Ir arriba">↑</button>
+        </main>
+
+        <div class="seccionSuscripcion">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h4 class="tituloFooterSuscripcion">Recibi todas nuestras<br><span class="tituloFooterSuscripcion1">PROMOCIONES Y NOVEDADES</span></h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form action="./pages/404.html" method="get">
+                            <div class="form-group">
+                                <input type="email" placeholder="Ingresa tu dirección de email" id="email" name="email" required >
+                                <input type="submit" value="Suscribite">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footerPrincipal">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-3 footerCol">
+                    <a href="index.html">
+                        <img class="logoFotter" src="./assets/img/logo_coffeeShop_bco.png" alt="Logo de COFFEE SHOP" loading="lazy">
+                    </a>
+                    <p class="txtFooter">ABASTO SHOPPING</p>
+                    <p class="txtFooter1">Avenida Corrientes 3247, Lavalle 3120<br>C1193 DF - Buenos Aires - Argentina<br>Teléfono: 0800-222-2299</p>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="coffeeShop">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">COFFEE SHOP</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="index.html">Inicio</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/nosotros.html">Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/cafeteria.html">Cafetería</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/pasteleria.html">Pastelería</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="ayuda">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">¿NECESITÁS AYUDA?</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/404.html">Convertite en Barista</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/404.html">Franquicias</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/404.html">Trabaja con Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="./pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <h4 class="tituloFooterSocial">SEGUINOS EN LAS REDES</h4>
+                    <a href="./pages/404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-square-whatsapp btnColor--whatsapp"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook | CoffeeShop"><i class="fa-brands fa-square-facebook btnColor--facebook"></i></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram | CoffeeShop"><i class="fa-brands fa-square-instagram btnColor--instagram"></i></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" title="Youtube | CoffeeShop"><i class="fa-brands fa-youtube btnColor--youtube"></i></a>
+                </div>
+              </div>
+            </div>
+        </footer>
+        <div class="container-fluid divCopyright text-center">
+            <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
+        </div>
+        <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            window.onscroll = function() {
+                mostrarBotonIrArriba();
+            };
+
+            function mostrarBotonIrArriba() {
+                var botonIrArriba = document.getElementById("btnIrArriba");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    botonIrArriba.style.display = "block";
+                } else {
+                    botonIrArriba.style.display = "none";
+                }
+            }
+
+            document.getElementById("btnIrArriba").addEventListener("click", function() {
+                document.body.scrollTop = 0; // Para navegadores Safari
+                document.documentElement.scrollTop = 0; // Para otros navegadores
+            });
+        </script>
+    </body>
+</html>

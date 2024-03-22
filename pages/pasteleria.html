@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pastelería | COFFEE SHOP</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body>
+        <header class="header position-sticky top-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img class="logoPrincipal" src="../assets/img/logo_coffeeShop.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                            <li class="nav-item text-center">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item text-center dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cafetería
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/cafeteria.html">Café & Especialidades</a></li>
+                                    <li><a class="dropdown-item" href="../pages/cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link active colorClaroActive" href="../pages/pasteleria.html">Pastelería</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <script>
+                function move() {
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                    clearInterval(id);
+                    setTimeout(function() {
+                        elem.style.display = 'none';
+                    }, 1000);
+                    } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    }
+                }
+                }
+                window.onload = function() {
+                move();
+                };
+            </script>
+        </header>
+
+        <main class="mainCafeteria">
+            <section class="seccionTitulo">
+                <h1 class="tituloPrincipal">Pastelería</h1>
+                <p class="tituloSecundario">¡Tentate con nuestros sabores!</p>
+            </section>
+
+            <section class="seccionCardsCafe" id="seccionCardsCafe">
+                <h2 class="tituloSeccion">Tartas, Tortas & Postres</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_tiramisu.jpg" alt="Tiramisú Éxtasis">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Tiramisú Éxtasis</h3>
+                                    <p class="txtCardCafe">Cremoso y embriagador</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2300</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTiramisu" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTiramisu" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_tiramisu.jpg" alt="Tiramisú Éxtasis">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Tiramisú Éxtasis</h3>
+                                            <p class="off-canvas-txtCardCafe">Deléitate con nuestro Tiramisú Éxtasis, una experiencia cremosa y embriagadora que conquistará tu paladar. Cada bocado es un viaje a la perfección, donde la suavidad del mascarpone se mezcla con el aroma del café y el toque dulce del cacao. Descubre la exquisitez de esta clásica delicia italiana, elevando tus momentos dulces a una experiencia única. Deleita tus sentidos con nuestras Tartas, Tortas & Postres, especialmente con nuestro Tiramisú Éxtasis, la cima del placer culinario.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_tartafrutos.jpg" alt="Cheesecake Frutas Frescas">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Cheesecake Frutas Frescas</h3>
+                                    <p class="txtCardCafe">Dulce y refrescante</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2500</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCheesecake" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCheesecake" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_tartafrutos.jpg" alt="Cheesecake Frutas Frescas">
+                                            <h3 class="off-canvas-tituloCardCafe">Cheesecake Frutas Frescas</h3>
+                                            <p class="off-canvas-txtCardCafe">Disfruta de nuestro Cheesecake Frutas Frescas, una experiencia dulce y refrescante que deleitará tu paladar. Cada porción es un festín de suavidad, donde la cremosidad del cheesecake se combina con la frescura de las frutas. Descubre la armonía perfecta de sabores, elevando tus momentos dulces a una experiencia única. Deleita tus sentidos con nuestras Tartas, Tortas & Postres, especialmente con nuestro Cheesecake Frutas Frescas, una deliciosa fusión de dulzura y frescura en cada bocado.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_brownie.jpg" alt="Brownie Intenso">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Brownie Intenso</h3>
+                                    <p class="txtCardCafe">Chocolate denso y suave</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2100</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBrownie" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBrownie" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_brownie.jpg" alt="Brownie Intenso">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Brownie Intenso</h3>
+                                            <p class="off-canvas-txtCardCafe">Descubre la intensidad en cada bocado con nuestro Brownie Intenso, una explosión de chocolate denso y suavidad incomparable. Cada porción es un placer equilibrado, donde la riqueza del chocolate se fusiona con la suavidad del brownie. Deléitate con esta experiencia decadente, elevando tus momentos dulces a nuevas alturas. Nuestras Tartas, Tortas & Postres te invitan a disfrutar del placer único del Brownie Intenso, un deleite para los amantes del chocolate y la indulgencia.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_applepie.jpg" alt="Tarta Manzana Especiada">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Tarta Manzana Especiada</h3>
+                                    <p class="txtCardCafe">Sabor casero único</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2600</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTarta" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTarta" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_applepie.jpg" alt="Tarta Manzana Especiada">
+                                            <h3 class="off-canvas-tituloCardCafe">Tarta Manzana Especiada</h3>
+                                            <p class="off-canvas-txtCardCafe">Explora el sabor casero único de nuestra Tarta Manzana Especiada. Cada bocado es un viaje de indulgencia, donde la frescura de las manzanas se combina con una mezcla de especias encantadora. Descubre la armonía perfecta de sabores en esta delicia que evoca recuerdos acogedores. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la autenticidad de la Tarta Manzana Especiada, una experiencia que resalta el placer de lo casero en cada porción."</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_eclairs.jpg" alt="Éclair Caramelo Salado">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Éclair Caramelo Salado</h3>
+                                    <p class="txtCardCafe">Dulce y salado perfecto</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2450</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEclair" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEclair" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_eclairs.jpg" alt="Éclair Caramelo Salado">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Éclair Caramelo Salado</h3>
+                                            <p class="off-canvas-txtCardCafe">Experimenta el equilibrio perfecto entre dulce y salado con nuestro Éclair Caramelo Salado. Cada mordisco es una sinfonía de sabores, donde la suavidad del éclair se encuentra con la intensidad del caramelo salado. Descubre la armonía única que redefine el placer culinario. Nuestras Tartas, Tortas & Postres te invitan a disfrutar del deleite irresistible del Éclair Caramelo Salado, una experiencia que cautiva con cada indulgencia.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_cupcake.jpg" alt="Cupcake Red Velvet">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Cupcake Red Velvet</h3>
+                                    <p class="txtCardCafe">Elegancia roja y suave</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2200</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCupcake" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCupcake" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_cupcake.jpg" alt="Cupcake Red Velvet">
+                                            <h3 class="off-canvas-tituloCardCafe">Cupcake Red Velvet</h3>
+                                            <p class="off-canvas-txtCardCafe">Embárcate en una experiencia de elegancia con nuestro Cupcake Red Velvet. La suavidad y la intensidad se fusionan en cada bocado, revelando el placer de la textura aterciopelada y el sabor distintivo. Descubre la armonía perfecta en este capricho rojo, donde la delicia y la elegancia se encuentran. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la sofisticación del Cupcake Red Velvet, una joya culinaria que cautiva con su color y sabor únicos.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_croissant.jpg" alt="Croissant Almendra">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Croissant Almendra</h3>
+                                    <p class="txtCardCafe">Delicadeza crujiente</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCroissant" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCroissant" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_croissant.jpg" alt="Croissant Almendra">
+                                            <h3 class="off-canvas-tituloCardCafe">Croissant Almendra</h3>
+                                            <p class="off-canvas-txtCardCafe">enta la deliciosa combinación de textura crujiente y delicadeza con nuestro Croissant Almendra. Cada bocado es un viaje a la exquisitez, donde la masa hojaldrada se fusiona con el toque perfecto de almendra. Descubre la armonía de sabores y la experiencia única de esta delicia. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la sofisticación del Croissant Almendra, una opción irresistiblemente elegante para tus momentos dulces.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_rolls.jpg" alt="Roll de Canela Tentador">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Roll de Canela Tentador</h3>
+                                    <p class="txtCardCafe">Esencia acogedora</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2300</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRoll" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRoll" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_rolls.jpg" alt="Roll de Canela Tentador">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Roll de Canela Tentador</h3>
+                                            <p class="off-canvas-txtCardCafe">Deleita tu paladar con nuestro Roll de Canela Tentador, una esencia acogedora en cada vuelta. La masa suave y el relleno irresistible de canela crean una experiencia reconfortante. Descubre la armonía de sabores y la esencia única de esta delicia. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la tentación del Roll de Canela, un placer acogedor para tus momentos dulces.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_lemonpie.jpg" alt="Tarta Limón Merengue">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Tarta Limón Merengue</h3>
+                                    <p class="txtCardCafe">Acidez y dulzura divinas</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLimon" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLimon" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_lemonpie.jpg" alt="Tarta Limón Merengue">
+                                            <h3 class="off-canvas-tituloCardCafe">Tarta Limón Merengue</h3>
+                                            <p class="off-canvas-txtCardCafe">Descubre la magia de la acidez y dulzura divinas en nuestra Tarta Limón Merengue. Cada bocado es una sinfonía de sabores, donde la frescura del limón se encuentra con la suavidad del merengue. Experimenta la armonía única que deleitará tu paladar. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la perfección de la Tarta Limón Merengue, un deleite que fusiona la frescura y la dulzura en cada porción.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/past_macarrons.jpg" alt="Macarons Variados">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Macarons Variados</h3>
+                                    <p class="txtCardCafe">Pequeñas delicias exquisitas</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2500</p>
+                                    <p class="txtmonedaCardCafe">Precio por porción</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMacarons" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMacarons" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Tartas, Tortas & Postres</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/past_macarrons.jpg" alt="Macarons Variados">   
+                                            <h3 class="off-canvas-tituloCardCafe">Macarons Variados</h3>
+                                            <p class="off-canvas-txtCardCafe">Deléitate con nuestras pequeñas delicias exquisitas: Macarons Variados. Cada mordisco es una explosión de sabores, donde la textura crujiente se encuentra con rellenos delicados y variados. Descubre la diversidad de estas joyas de la repostería, elevando tus momentos dulces a un nivel sofisticado. Nuestras Tartas, Tortas & Postres te invitan a disfrutar de la exquisitez de los Macarons Variados, una selección única para satisfacer tu paladar.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <button id="btnIrArriba" title="Ir arriba">↑</button>
+        </main>
+
+        <div class="seccionSuscripcion">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h4 class="tituloFooterSuscripcion">Recibi todas nuestras<br><span class="tituloFooterSuscripcion1">PROMOCIONES Y NOVEDADES</span></h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form action="404.html" method="get">
+                            <div class="form-group">
+                                <input type="email" placeholder="Ingresa tu dirección de email" id="email" name="email" required >
+                                <input type="submit" value="Suscribite">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footerPrincipal">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-3 footerCol">
+                    <a href="../index.html">
+                        <img class="logoFotter" src="../assets/img/logo_coffeeShop_bco.png" alt="Logo de COFFEE SHOP" loading="lazy">
+                    </a>
+                    <p class="txtFooter">ABASTO SHOPPING</p>
+                    <p class="txtFooter1">Avenida Corrientes 3247, Lavalle 3120<br>C1193 DF - Buenos Aires - Argentina<br>Teléfono: 0800-222-2299</p>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="coffeeShop">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">COFFEE SHOP</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="../index.html">Inicio</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="nosotros.html">Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html">Cafetería</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="pasteleria.html">Pastelería</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="ayuda">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">¿NECESITÁS AYUDA?</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Convertite en Barista</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Franquicias</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Trabaja con Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12  col-md-3 footerCol">
+                    <h4 class="tituloFooterSocial">SEGUINOS EN LAS REDES</h4>
+                    <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-square-whatsapp btnColor--whatsapp"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook | CoffeeShop"><i class="fa-brands fa-square-facebook btnColor--facebook"></i></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram | CoffeeShop"><i class="fa-brands fa-square-instagram btnColor--instagram"></i></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" title="Youtube | CoffeeShop"><i class="fa-brands fa-youtube btnColor--youtube"></i></a>
+                </div>
+              </div>
+            </div>
+        </footer>
+        <div class="container-fluid divCopyright text-center">
+            <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
+        </div>
+        <script src="../js/bootstrap.bundle.js"></script>
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            window.onscroll = function() {
+                mostrarBotonIrArriba();
+            };
+
+            function mostrarBotonIrArriba() {
+                var botonIrArriba = document.getElementById("btnIrArriba");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    botonIrArriba.style.display = "block";
+                } else {
+                    botonIrArriba.style.display = "none";
+                }
+            }
+
+            document.getElementById("btnIrArriba").addEventListener("click", function() {
+                document.body.scrollTop = 0; // Para navegadores Safari
+                document.documentElement.scrollTop = 0; // Para otros navegadores
+            });
+        </script>
+    </body>
+</html>

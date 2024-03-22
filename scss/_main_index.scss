@@ -1,0 +1,228 @@
+.seccionTitulo{
+    height: $alto100vh;
+    background: url("../assets/img/fondo_principal.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    padding-left: $size-px-6x;
+    padding-top: $size-px-6x;
+    color:$color-marron9;
+    .tituloPrincipal{
+        font-size: $fuente-4-5;
+        font-weight: 700;
+    }
+    .tituloSecundario{
+        font-size: $fuente-2-5;
+        font-weight: 300;
+        margin-top: -$size-px-10;
+        margin-bottom: $size-px-15;
+    }
+    .linkDescubrir{
+        box-sizing: content-box;
+        background-color: transparent;
+        width: 140px;
+        color: $color-marron9;
+        text-decoration: none;
+        border: $size-px-1 solid $color-marron9;
+        font-size: $fuente-1-5;
+        padding: $size-px-18 $size-px-15 $size-px-15 $size-px-15;
+        margin-top: $size-px-12;
+        transition: background 0.3s, color 0.3s;
+        &:hover{
+            background-color: $color-marron;
+            border: $size-px-2 solid $color-marron9;
+            transition: background 0.3s, color 0.3s;
+            transform: scale(1.01, 1.01);
+            box-shadow: 0 0 $size-px-12 $color-marron9;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .seccionTitulo{
+        background-image: url("../assets/img/fondo_principal_peq.jpg");
+        .tituloPrincipal{
+            font-size: $fuente-3-3;
+        }
+        .tituloSecundario{
+            font-size: $fuente-1-5;
+        }
+        .linkDescubrir{
+            width: 120px;
+            font-size: $fuente-1-2;
+            padding: $size-px-18 $size-px-15 $size-px-15 $size-px-15;
+        } 
+    }
+}
+
+.seccionCards{
+    width: $ancho80;
+    margin: $size-px-50 auto $size-px-50 auto;
+    text-align: center;
+    .card{
+        height: auto;
+        background-color: $color-marron8;
+        border-radius: $size-px-12;
+        border-color: $color-marron8;
+        margin: $size-px-80 $size-px-10 $size-px-80 $size-px-10;
+        padding: $size-px-25 $size-px-20 $size-px-10 $size-px-20;
+        text-align: center;
+        .card-img-top{
+            width: $ancho100;
+            height: auto;
+            border-radius: $size-px-12;
+            margin-top: -$size-px-50; 
+        }
+        .card-body{
+            min-height: 230px;
+            .card-title{
+                color: $color-marron;
+                text-align: center;
+                font-size: $fuente-1-8;
+                font-weight: bold;
+            }
+            .card-text{
+                font-size: $fuente-1;
+                color: $color-marron;
+                font-weight: 500;
+                text-align: center;
+                margin-top: $size-px-10;
+                margin-bottom: $size-px-20;
+                min-height: $size-px-80;
+            }
+            .linkCard{
+                display: inline-block;
+                background-color: transparent;
+                width: $ancho100px;
+                color: $color-marron;
+                text-decoration: none;
+                border: $size-px-1 solid $color-marron;
+                font-size: $fuente-1;
+                padding: $size-px-10;
+                margin-top: $size-px-10;
+            }
+            .linkCard:hover{
+                background-color: $color-marron;
+                color: $color-marron9;
+            }
+        }
+    }
+}
+
+.seccionBarista{
+    background-color: $color-marron8;
+    padding-bottom: $size-px-50;
+    .imgBarista{
+        object-fit: cover;
+        border-radius: $size-px-12;
+        margin-top: $size-px-30;
+    }
+    .tituloBarista{
+        font-size: $fuente-1-8;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: left;
+        margin-top: $size-px-30;
+        margin-bottom: $size-px-10;
+    }
+    .txtBarista{
+        font-size: $fuente-1-1;
+        color: $color-marron;
+        font-weight: normal;
+        text-align: left;
+        margin-left: $size-px-15;
+        margin-top: $size-px-5;
+        margin-bottom: $size-px-7;
+    }
+}
+
+.seccionTarjetasX2{
+    margin: $size-px-50 0 $size-px-50 0;
+    .card{
+        background-color: $color-marron8;
+        max-width: 540px; 
+    }
+    .card-title{
+        color: $color-marron;
+        font-size: $fuente-1-5;
+        font-weight: bold;
+    }
+    .card-text{
+        color: $color-marron;
+        font-size: $fuente-1-1;
+        line-height: 1.2;
+        padding: $size-px-15;
+    }
+    .linkCard{
+        display: inline-block;
+        background-color: transparent;
+        width: $ancho100px;
+        color: $color-marron;
+        text-decoration: none;
+        border: $size-px-1 solid $color-marron;
+        font-size: $fuente-1;
+        padding: $size-px-10;
+        margin-top: $size-px-10;
+    }
+    .linkCard:hover{
+        background-color: $color-marron;
+        color: $color-marron9;
+    }
+}
+@media screen and (max-width: 768px){
+    .seccionTarjetasX2{
+        .card{
+            max-width: $ancho75;
+            margin-bottom: $size-px-20;
+        }
+        .img-fluid{
+            width: $ancho100;
+            height: 260px;
+            object-fit: cover;
+        }
+    }
+}
+
+.cardComentario{
+    height: auto;
+    background-color: $color-marron10;
+    border: $size-px-1 solid $color-marron;
+    border-radius: $size-px-12;
+    border-color: $color-marron;
+    margin: $size-px-50 $size-px-5 $size-px-50 $size-px-5;
+    padding: $size-px-25 0 $size-px-10 0;
+    object-fit: center;
+    .imgComentario{
+        object-fit: center;
+        width: $ancho40;
+        height: $alto40;
+        box-shadow: $size-px-2 $size-px-2 $size-px-2 $size-px-1 $color-sombras;
+        margin-top: -$size-px-55;
+    }
+    .tituloComentario{
+        font-size: $fuente-1-8;
+        color: $color-marron;
+        font-weight: bold;
+        margin-top: $size-px-10;
+        margin-bottom: $size-px-10;
+    }
+    .subtituloComentario{
+        font-size: $fuente-1-1;
+        color: $color-marron;
+        font-weight: normal;
+        margin-top: $size-px-10;
+        margin-bottom: $size-px-10;
+    }
+    .txtComentario{
+        font-size: $fuente-0-9;
+        color: $color-marron;
+        font-weight: 500;
+        text-align: left;
+        margin-top: $size-px-20;
+        margin-bottom: $size-px-10;       
+    }
+}
+@media screen and (max-width: 768px){
+    .cardComentarioContainer{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}

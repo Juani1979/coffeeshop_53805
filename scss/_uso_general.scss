@@ -1,0 +1,205 @@
+/* Título de Secciones */
+.tituloSeccion{
+    color: $color-marron;
+    text-align: center;
+    font-size: $fuente-3;
+    padding-top: $size-px-50;
+}
+.lineaTitulos{
+    width: 120px;
+    border: $size-px-2 solid $color-marron;
+    border-radius: $size-px-12;
+    margin: $size-px-10 auto $size-px-50 auto;
+    text-align: center;
+}
+
+/* Separador */
+.divSeparador{
+    height: $size-px-50;
+}
+
+/* Icono WhatsApp */
+.fa-whatsapp{
+    color:$color-whatsapp;
+    font-size: $fuente-3;
+    position: fixed;
+    bottom: $size-px-15;
+    right: $size-px-20;
+    transition: transform 0.3s ease;
+} 
+.fa-whatsapp:hover {
+    transform: scale(1.2);
+}
+
+/* Sección Suscripción */
+.seccionSuscripcion{
+    background-image: url("../assets/img/fondo_suscripcion.jpg");
+    background-size: cover;
+    color: $color-blanco;
+    margin-top: $size-px-30;
+    padding: $size-px-50 0;
+    .tituloFooterSuscripcion{
+        font-size: $fuente-1-8;
+        color: $color-marron;
+        font-weight: normal;
+        text-align: right;
+        padding-right: $size-px-20;
+        margin-top: $size-px-3;
+        margin-bottom: $size-px-3;
+    }
+    .tituloFooterSuscripcion1{
+        font-size: $fuente-2-5;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: right;
+        margin-top: $size-px-3;
+        margin-bottom: $size-px-3;
+    }
+    form{
+        input[type="email"]{
+            width: $ancho30;
+            max-width: $ancho30;
+            height: 38px;
+            font-size: $fuente-1-2;
+            background-color: $color-marron9;
+            border: $size-px-1 solid $color-marron;
+            border-top-left-radius: $size-px-25;
+            border-bottom-left-radius: $size-px-25;
+            padding: $size-px-7 $size-px-5 $size-px-5 $size-px-15;
+            margin-top: $size-px-10;
+            margin-left: $size-px-20;
+            box-sizing:content-box;
+        }
+        input[type="submit"]{
+            font-size: $fuente-1-2;
+            height: 38px;
+            font-weight: normal;
+            background-color: $color-marron;
+            color: $color-marron9;
+            border: $size-px-1 solid $color-marron;
+            border-top-right-radius: $size-px-25;
+            border-bottom-right-radius: $size-px-25;
+            padding: $size-px-7 $size-px-25 $size-px-5 $size-px-20;
+            margin-top: $size-px-10;
+            margin-left: -$size-px-3;
+            box-sizing:content-box;
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .seccionSuscripcion{
+        form{
+            text-align: center;
+            input[type="email"]{
+                width: $ancho50;
+                max-width: $alto50;
+            }
+        }
+        .tituloFooterSuscripcion{
+            width: $ancho100;
+            max-width: $ancho100;
+            text-align: center;
+            padding-right: initial;
+            margin-top: initial;
+            margin-bottom: initial;
+        }
+        .tituloFooterSuscripcion1{
+            text-align: center;
+            margin-top: initial;
+            margin-bottom: initial;
+        }
+    }
+}
+
+/* Sección Error */
+.imgError{
+    width: 270px;
+    height: auto;
+    border-radius: $size-px-12;
+    margin: $size-px-50 $size-px-10 $size-px-20 $size-px-10;
+}
+.tituloSeccionError{
+    color: $color-marron;
+    text-align: center;
+    font-size: $fuente-2-7;
+    padding-top: $size-px-50;
+    padding-bottom: $size-px-15;
+}
+.subtituloSeccionError{
+    color: $color-marron;
+    text-align: center;
+    font-size: $fuente-1-2;
+    padding-bottom: $size-px-50;
+}
+.linkError{
+    box-sizing: content-box;
+    display: inline;
+    display: inline-block;
+    background-color: transparent;
+    width: $ancho100px;
+    color: $color-marron;
+    text-decoration: none;
+    border: $size-px-1 solid $color-marron;
+    border-radius: $size-px-25;
+    font-size: $fuente-1;
+    text-align: center;
+    padding: $size-px-10;
+    margin-top: $size-px-10;
+}
+.linkError:hover{
+    background-color: $color-marron;
+    color: $color-marron9;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .tituloSeccionError{
+        font-size: $fuente-2-1;
+    }
+    .subtituloSeccionError{
+        font-size: $fuente-1-1;
+    }
+    .imgError{
+        width: $ancho200px;
+    }
+}
+
+/* Sección Copyright */
+.divCopyright{
+    background-color: map-get($estilosCopyright, bgColor);
+    font-size: map-get($estilosCopyright, fontSize);
+    letter-spacing: map-get($estilosCopyright, letterSpacing);
+    color: map-get($estilosCopyright, color);
+    padding-top: map-get($estilosCopyright, paddingTop);
+    padding-bottom: map-get($estilosCopyright, paddingBottom);
+}
+
+/* Sección Botón ir Arriba */
+#btnIrArriba {
+    display: none;
+    position: fixed;
+    bottom: $size-px-75;
+    right: $size-px-25;
+    font-size: $size-px-20;
+    background-color: $color-marron8;
+    color: $color-marron;
+    border: none;
+    border-radius: $ancho50;
+    padding: $size-px-10 $size-px-15;
+    cursor: pointer;
+}
+
+#btnIrArriba:hover {
+    background-color: $color-marron;
+    color: $color-marron8;
+}
+
+.progress-container {
+    width: $ancho100;
+}
+  
+.progress-bar {
+    width: $ancho1;
+    height: $size-px-3;
+    background-color: $color-marron5;
+}

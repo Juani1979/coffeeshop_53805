@@ -1,0 +1,22 @@
+{
+  "name": "coffeeshop_53805",
+  "version": "1.0.0",
+  "description": "Proyecto CoffeeShop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juani1979/coffeeshop_53805.git"
+  },
+  "author": "Juan Ignacio Romano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juani1979/coffeeshop_53805/issues"
+  },
+  "homepage": "https://github.com/Juani1979/coffeeshop_53805#readme",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}

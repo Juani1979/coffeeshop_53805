@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafetería | COFFEE SHOP</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body>
+        <header class="header position-sticky top-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img class="logoPrincipal" src="../assets/img/logo_coffeeShop.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                            <li class="nav-item text-center">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item text-center dropdown">
+                                <a class="nav-link dropdown-toggle active colorClaroActive" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cafetería
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/cafeteria.html">Café & Especialidades</a></li>
+                                    <li><a class="dropdown-item" href="../pages/cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../pages/pasteleria.html">Pastelería</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <script>
+                function move() {
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                    clearInterval(id);
+                    setTimeout(function() {
+                        elem.style.display = 'none';
+                    }, 1000);
+                    } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    }
+                }
+                }
+                window.onload = function() {
+                move();
+                };
+            </script>
+        </header>
+
+        <main class="mainCafeteria">
+            <section class="seccionTitulo">
+                <h1 class="tituloPrincipal">Cafetería</h1>
+                <p class="tituloSecundario">¡Tentate con nuestros sabores!</p>
+            </section>
+
+            <section class="seccionCardsCafe text-center" id="seccionCardsCafe">
+                <section class="menuFiltro">
+                    <div class="container">
+                        <div class="row">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                            <a type="button" class="btn btn-filtro" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <img class="pr-5 align-middle" src="../assets/img/icono_filtrar.png" width="24" height="24" alt="Filtrar Productos">&nbsp;&nbsp;&nbsp;Filtro
+                                            </a>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <p class="modal-title" id="exampleModalLabel"><img class="logoModal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></p>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p class="tituloModal font-weight-bold">Seleccione para filtrar:</p>
+                                                            <p class="subTituloModal text-center font-weight-bold">Intensidad</p>
+                                                            <a class="btn btn-tipoFiltro">Delicado 0-5</a>
+                                                            <a class="btn btn-tipoFiltro">Equilibrado 6-8</a>
+                                                            <a class="btn btn-tipoFiltro">Intenso 9-13</a>
+                                                            <p class="subTituloModal text-center font-weight-bold">Tamaño de Taza</p>
+                                                            <a class="btn btn-tipoFiltro">Espresso</a>
+                                                            <a class="btn btn-tipoFiltro">Lungo</a>
+                                                            <a class="btn btn-tipoFiltro">Receta Fría</a>
+                                                            <a class="btn btn-tipoFiltro">Cappuccino y Late Macchiato</a>
+                                                            <a class="btn btn-tipoFiltro">Ristreto</a>
+                                                            <p class="subTituloModal text-center font-weight-bold">Perfil Aromático</p>
+                                                            <a class="btn btn-tipoFiltro">Afrutado</a>
+                                                            <a class="btn btn-tipoFiltro">Dulce</a>
+                                                            <a class="btn btn-tipoFiltro">tostado</a>
+                                                            <a class="btn btn-tipoFiltro">Amaderado</a>
+                                                            <a class="btn btn-tipoFiltro">Coconut</a>
+                                                            <a class="btn btn-tipoFiltro">Especiado</a>
+                                                            <a class="btn btn-tipoFiltro">Aromatizado</a>
+                                                            <a class="btn btn-tipoFiltro">Vanilla</a>
+                                                            <a class="btn btn-tipoFiltro">Caramelo</a>
+                                                            <a class="btn btn-tipoFiltro">Intenso</a>
+                                                            <a class="btn btn-tipoFiltro">Chocolate</a>
+                                                            <a class="btn btn-tipoFiltro">Equilibradoe</a>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link align-middle" href="#"><img class="pr-5" src="../assets/img/icono_taza.png" width="24" height="24" alt="Filtrar Productos">&nbsp;&nbsp;&nbsp;Café & Especialidades</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link align-middle" href="#secSeparador"><img class="pr-5" src="../assets/img/icono_capsula.png" width="24" height="24" alt="Filtrar Productos">&nbsp;&nbsp;&nbsp;Café en Cápsulas</a>
+                                        </li>
+                                    </ul>
+                                    <li class="navbar-nav nav-item text-center dropdown">
+                                        <a class="nav-link dropdown-toggle active colorClaroActive" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Mostrar por
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="../pages/404.html">Producto Nuevo</a></li>
+                                            <li><a class="dropdown-item" href="../pages/404.html">Ultimas Unidades</a></li>
+                                            <li><a class="dropdown-item" href="../pages/404.html">Menor precio</a></li>
+                                            <li><a class="dropdown-item" href="../pages/404.html">Mayor precio</a></li>
+                                            <li><a class="dropdown-item" href="../pages/404.html">Nombre A-Z</a></li>
+                                            <li><a class="dropdown-item" href="../pages/404.html">Nombre Z-A</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="secSepara">
+                    <div class="divSeparador"></div>
+                </section>
+                <h2 class="tituloSeccion">Café & Especialidades</h2>
+                <hr class="lineaTitulos"/>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_espresso.jpg" alt="Espresso Puro">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Espresso Puro</h3>
+                                    <p class="txtCardCafe">Intenso y robusto</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1200</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEspresso" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEspresso" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                        <img class="offcanvas-imagen" src="../assets/img/cafeteria_espresso.jpg" alt="Espresso Puro">
+                                        <h3 class="off-canvas-tituloCardCafe">Espresso Puro</h3>
+                                        <p class="off-canvas-txtCardCafe">Sumérgete en una experiencia café incomparable con nuestro Espresso Puro. Su carácter intenso y robusto captura la esencia de los granos cuidadosamente seleccionados. Cada sorbo despierta tus sentidos con un aroma profundo y un sabor inigualable. Descubre la auténtica pasión por el café en cada taza, una experiencia que te transporta al corazón del café más puro y delicioso. Eleva tus momentos de placer con nuestro Espresso Puro, una explosión de intensidad que redefine el arte del café.</p>
+                                        <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                    </div>
+                                  </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_cappuccino.jpg" alt="Cappuccino Suave">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Cappuccino Suave</h3>
+                                    <p class="txtCardCafe">Equilibrio perfecto</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1500</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCappuccino" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCappuccino" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_cappuccino.jpg" alt="Cappuccino Suave">
+                                            <h3 class="off-canvas-tituloCardCafe">Cappuccino Suave</h3>
+                                            <p class="off-canvas-txtCardCafe">Descubre la armonía en cada sorbo con nuestro Cappuccino Suave. La fusión perfecta de espresso delicado, leche cremosa y una capa de espuma ligera. Experimenta el equilibrio sublime de sabores en esta deliciosa creación. Una experiencia suave que eleva tu momento café a una nueva dimensión de placer. Disfruta de la perfección en cada taza, donde la suavidad se encuentra con la excelencia.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_latte_vainilla.jpg" alt="Latte Vainilla">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Latte Vainilla</h3>
+                                    <p class="txtCardCafe">Suavidad con toque dulce</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLatte" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLatte" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_latte_vainilla.jpg" alt="Latte Vainilla">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Latte Vainilla</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la suavidad indulgente de nuestro Latte Vainilla. Una fusión exquisita de espresso suave y leche sedosa, realzada con el toque dulce de la vainilla. Cada sorbo es una experiencia elegante que acaricia tus sentidos. Deleita tu paladar con esta combinación única de suavidad y dulzura. Descubre un latte extraordinario que transforma cada momento en una indulgencia inolvidable.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_mocha_intenso.jpg" alt="Mocha Intenso">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Mocha Intenso</h3>
+                                    <p class="txtCardCafe">Chocolate y café fundidos</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMocha" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMocha" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_mocha_intenso.jpg" alt="Mocha Intenso">
+                                            <h3 class="off-canvas-tituloCardCafe">Mocha Intenso</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la intensidad irresistible de nuestro Mocha Intenso, donde el chocolate de alta calidad se funde con el robusto sabor del café. Una experiencia indulgente que despierta tus sentidos con cada sorbo. Descubre la armonía perfecta entre el amargor del café y la dulzura del chocolate, creando un equilibrio delicioso. Disfruta de un viaje sensorial que redefine el placer del Mocha, una fusión exquisita que eleva tus momentos de indulgencia a nuevas alturas.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_americano.jpg" alt="Americano Clásico">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Americano Clásico</h3>
+                                    <p class="txtCardCafe">Simple y reconfortante</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1250</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAmericano" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAmericano" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_americano.jpg" alt="Americano Clásico">
+                                            <h3 class="off-canvas-tituloCardCafe">Americano Clásico</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la simplicidad reconfortante de nuestro Americano Clásico. Un café que celebra la pureza y la esencia del grano. Su sabor suave y equilibrado te envuelve en una experiencia auténtica. Disfruta de la calidez reconfortante de cada sorbo, un viaje directo al corazón del café. Descubre la belleza en la simplicidad con nuestro Americano Clásico, tu compañero perfecto para momentos relajados y gratificantes.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_flat_white.jpg" alt="Flat White Sedoso">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Flat White Sedoso</h3>
+                                    <p class="txtCardCafe">Textura cremosa</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFlat" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFlat" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_flat_white.jpg" alt="Flat White Sedoso">
+                                            <h3 class="off-canvas-tituloCardCafe">Flat White Sedoso</h3>
+                                            <p class="off-canvas-txtCardCafe">Explora la indulgencia de nuestro Flat White Sedoso, donde la textura cremosa se encuentra con el sabor robusto del espresso y la leche aterciopelada. Cada sorbo es un deleite suave y equilibrado, una experiencia sensorial que eleva tu momento café. Descubre la perfección en la simplicidad, donde la sedosidad se convierte en un placer cotidiano.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_macchiato_caramel.jpg" alt="Macchiato Caramel">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Macchiato Caramel</h3>
+                                    <p class="txtCardCafe">Caramelo con carácter</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1900</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMacchiato" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMacchiato" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_macchiato_caramel.jpg" alt="Macchiato Caramel">
+                                            <h3 class="off-canvas-tituloCardCafe">Macchiato Caramel</h3>
+                                            <p class="off-canvas-txtCardCafe">Experimenta la fusión audaz de nuestro Macchiato Caramel, donde el carácter del café se encuentra con la dulzura del caramelo. Un equilibrio perfecto entre intensidad y suavidad. Cada sorbo es una danza exquisita de sabores, elevando tu experiencia de café a nuevas alturas. Descubre el placer inigualable de nuestro Macchiato Caramel, una deliciosa indulgencia que cautiva tus sentidos.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafeteria_cold_brew.jpg" alt="Cold Brew Refrescante">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Cold Brew Refrescante</h3>
+                                    <p class="txtCardCafe">Café frío, energía fresca</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="txtmonedaCardCafe">Precio por unidad</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCold" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCold" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Café & Especialidades</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafeteria_cold_brew.jpg" alt="Cold Brew Refrescante">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Cold Brew Refrescante</h3>
+                                            <p class="off-canvas-txtCardCafe">Despierta tus sentidos con nuestro Cold Brew Refrescante. Café frío con una energía fresca que revitaliza tu día. Experimenta la suavidad y pureza de cada sorbo, una explosión refrescante que redefine la forma de disfrutar el café. Descubre la frescura pura en cada vaso, tu impulso perfecto para enfrentar el día con vitalidad.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="secSeparador">
+                <div class="divSeparador"></div>
+            </section>
+            <section class="seccionCardsCafe" id="seccionCardsCap">
+                <h2 class="tituloSeccion">Café en Cápsulas</h2>
+                <center><hr class="lineaTitulos"/></center>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_brasil.jpg" alt="Café Brasil">
+                                <div class="productoUltimos">
+                                    <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café Brasil</h3>
+                                    <p class="txtCardCafe">Intenso y robusto de Origen</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBrasil" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBrasil" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_brasil.jpg" alt="Café Brasil">
+                                            <div class="off-canvas-productoUltimo">
+                                                <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Café Brasil</h3>
+                                            <p class="off-canvas-txtCardCafe">Explora la intensidad y robustez de nuestro Café Brasil, una experiencia de origen auténtica en cada cápsula. Cultivado en las exuberantes tierras de Brasil, este café cautivador te sumerge en notas audaces y un aroma embriagador. Descubre la pasión por el café en cada sorbo. ¡Haz que cada mañana sea una celebración con nuestras cápsulas de Café Brasil, el auténtico sabor de la tradición cafetera brasileña!</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_caramello.jpg" alt="Caramello">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Caramello</h3>
+                                    <p class="txtCardCafe">Café con aroma a caramelo</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>12490</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCaramello" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCaramello" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_caramello.jpg" alt="Caramello">
+                                            <h3 class="off-canvas-tituloCardCafe">Caramello</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la indulgencia con nuestras cápsulas Caramello, una fusión cautivadora de café con un toque irresistiblemente dulce de caramelo. Cada sorbo es una experiencia exquisita, donde la riqueza del café se entrelaza armoniosamente con la suavidad y dulzura del caramelo. Descubre el equilibrio perfecto entre lo audaz y lo dulce, elevando tu rutina diaria a un nuevo nivel de placer. Experimenta el café de una manera completamente nueva con nuestras cápsulas Caramello. Un deleite indulgente en cada taza.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_coco.jpg" alt="Coconut Flavour">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Coconut Flavour</h3>
+                                    <p class="txtCardCafe">Coco con un toque de vainilla</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13550</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCoco" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCoco" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_coco.jpg" alt="Coconut Flavour">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Coconut Flavour</h3>
+                                            <p class="off-canvas-txtCardCafe">Experimenta una aventura tropical con nuestras cápsulas Coconut Flavour. Sumérgete en la exquisita fusión de coco y vainilla que eleva tu experiencia de café. Cada sorbo es como un paseo por la playa, donde la frescura del coco se entrelaza con la suavidad de la vainilla. Descubre una nueva dimensión de placer en cada taza. Eleva tu rutina diaria con la indulgencia tropical de nuestras cápsulas Coconut Flavour, una experiencia única que transformará tu paleta de sabores.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_colombia.jpg" alt="Café Colombia">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café Colombia</h3>
+                                    <p class="txtCardCafe">Café frutal y vibrante de Origen</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasColombia" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasColombia" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_colombia.jpg" alt="Café Colombia">
+                                            <h3 class="off-canvas-tituloCardCafe">Café Colombia</h3>
+                                            <p class="off-canvas-txtCardCafe">Embárcate en un viaje sensorial con nuestras cápsulas Café Colombia, una experiencia vibrante de origen en cada sorbo. Proveniente de las altas montañas de Colombia, este café frutal deleita tus sentidos con su aroma cautivador y sabor robusto. Descubre la riqueza de la tierra colombiana en cada taza, donde la frescura y la vitalidad se fusionan. Experimenta la autenticidad de un café excepcional con nuestras cápsulas Café Colombia, una verdadera celebración de los sabores del mundo en tu taza diaria.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_etiopia.jpg" alt="Café Etiopia">
+                                <div class="productoUltimos">
+                                    <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café Etiopia</h3>
+                                    <p class="txtCardCafe">Café poderoso y contrastante de Origen</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>10790</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEtiopia" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEtiopia" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_etiopia.jpg" alt="Café Etiopia">
+                                            <div class="off-canvas-productoUltimo">
+                                                <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Café Etiopia</h3>
+                                            <p class="off-canvas-txtCardCafe">Descubre la intensidad de nuestras cápsulas Café Etiopía, un café poderoso y contrastante de origen único. Proveniente de las tierras altas de Etiopía, cada taza es una experiencia audaz con notas vibrantes y un aroma inconfundible. Sumérgete en la riqueza de esta variedad excepcional, donde la fuerza y el contraste se encuentran para crear una experiencia de café inigualable. Eleva tu ritual diario con nuestras cápsulas Café Etiopía, un viaje directo a la esencia del café extraordinario.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_india.jpg" alt="Café India">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café India</h3>
+                                    <p class="txtCardCafe">Potente y Especiado de Origen</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasIndia" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasIndia" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_india.jpg" alt="Café India">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Café India</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la magia de nuestras cápsulas Café India, un café potente y especiado de origen auténtico. Cultivado en las exuberantes tierras de la India, cada taza despierta tus sentidos con su robustez y especias exóticas. Experimenta la riqueza cultural en cada sorbo, donde la potencia se encuentra con el exquisito toque especiado. Eleva tu rutina diaria con nuestras cápsulas Café India, una experiencia única que te transporta a la esencia misma del café indio.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_indonesia.jpg" alt="Café Indonesia">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café Indonesia</h3>
+                                    <p class="txtCardCafe">Café rico y amaderado de Origen</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasIndonesia" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasIndonesia" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_indonesia.jpg" alt="Café Indonesia">
+                                            <h3 class="off-canvas-tituloCardCafe">Café Indonesia</h3>
+                                            <p class="off-canvas-txtCardCafe">Explora la sofisticación en cada sorbo con nuestras cápsulas Café Indonesia, un café rico y amaderado de origen auténtico. Proveniente de las exuberantes selvas de Indonesia, este café cautiva con su carácter distintivo y notas amaderadas. Descubre la profundidad en cada taza, donde la riqueza se fusiona con la esencia única de la tierra. Transforma tu experiencia cafetera diaria con nuestras cápsulas Café Indonesia, una travesía sensorial hacia la autenticidad del café de calidad.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_lungo.jpg" alt="Café Lungo">
+                                <div class="productoUltimos">
+                                    <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Café Lungo</h3>
+                                    <p class="txtCardCafe">Café dulce y delicado - Lungo</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLungo" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLungo" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_lungo.jpg" alt="Café Lungo">
+                                            <div class="off-canvas-productoUltimo">
+                                                <i class="fa-solid fa-mug-hot"> ULTIMAS UNIDADES</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Café Lungo</h3>
+                                            <p class="off-canvas-txtCardCafe">Descubre la sutileza en cada taza con nuestras cápsulas Café Lungo, un café dulce y delicado que te envuelve en su suavidad. Con una mezcla única, este café te brinda una experiencia equilibrada y reconfortante. Disfruta de la dulzura natural y la delicadeza en cada sorbo, creando momentos de placer inigualable. Eleva tu rutina diaria con nuestras cápsulas Café Lungo, la elección perfecta para los amantes de un café suave y deliciosamente equilibrado.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_paris.jpg" alt="París">
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">París</h3>
+                                    <p class="txtCardCafe">Cereales y galletas, con un toque cítrico</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParis" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasParis" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_paris.jpg" alt="París">
+                                            <h3 class="off-canvas-tituloCardCafe">París</h3>
+                                            <p class="off-canvas-txtCardCafe">Experimenta la elegancia en cada cápsula con nuestro Café París, una mezcla única de cereales, galletas y un toque cítrico que deleitará tu paladar. Cautiva tus sentidos con esta fusión exquisita, donde la suavidad se encuentra con la chispa cítrica. Descubre un café que redefine la indulgencia, creando momentos extraordinarios con cada taza. Eleva tu experiencia cafetera con nuestras cápsulas París, un viaje sensorial que te transporta directo a la Ciudad de la Luz.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="cardCafe text-center">
+                                <img class="imgCardCafe" src="../assets/img/cafe_spices.jpg" alt="Delight Spices">
+                                <div class="productoNuevo">
+                                    <i class="fa-solid fa-star"> NUEVO</i>
+                                </div>
+                                <div class="card-bodyCafe">
+                                    <h3 class="tituloCardCafe">Delight Spices</h3>
+                                    <p class="txtCardCafe">Especias & Vinoso</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13550</p>
+                                    <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
+                                    <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a> 
+
+                                    <a class="linkCardCafe rounded-pill text-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSpices" aria-controls="offcanvasRight">Ver más</a>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSpices" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <img class="logoPrincipal" src="../assets/img/logo_coffeeShop1.png" alt="Logo de COFFEE SHOP" title="CoffeeShop">
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <h2 class="off-canvas-tituloCard">Cápsulas de Café</h2>
+                                            <img class="offcanvas-imagen" src="../assets/img/cafe_spices.jpg" alt="Delight Spices">
+                                            <div class="off-canvas-productoNuevo">
+                                                <i class="fa-solid fa-star"> NUEVO</i>
+                                            </div>
+                                            <h3 class="off-canvas-tituloCardCafe">Delight Spices</h3>
+                                            <p class="off-canvas-txtCardCafe">Sumérgete en la armonía de nuestro Café Delight Spices, una fusión cautivadora de especias y toques vinosos. Cada cápsula es un viaje de sabores complejos, donde las especias danzan con la riqueza vinosa. Descubre la mezcla perfecta que transformará tu experiencia cafetera. Eleva tu gusto por el café con nuestras cápsulas Delight Spices, una aventura única para los amantes de la exquisita fusión de sabores.</p>
+                                            <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <button id="btnIrArriba" title="Ir arriba">↑</button>
+        </main>
+
+        <div class="seccionSuscripcion">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h4 class="tituloFooterSuscripcion">Recibi todas nuestras<br><span class="tituloFooterSuscripcion1">PROMOCIONES Y NOVEDADES</span></h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form action="404.html" method="get">
+                            <div class="form-group">
+                                <input type="email" placeholder="Ingresa tu dirección de email" id="email" name="email" required >
+                                <input type="submit" value="Suscribite">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footerPrincipal">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-3 footerCol">
+                    <a href="../index.html">
+                        <img class="logoFotter" src="../assets/img/logo_coffeeShop_bco.png" alt="Logo de COFFEE SHOP" loading="lazy">
+                    </a>
+                    <p class="txtFooter">ABASTO SHOPPING</p>
+                    <p class="txtFooter1">Avenida Corrientes 3247, Lavalle 3120<br>C1193 DF - Buenos Aires - Argentina<br>Teléfono: 0800-222-2299</p>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="coffeeShop">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">COFFEE SHOP</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="../index.html">Inicio</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="nosotros.html">Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html">Cafetería</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="cafeteria.html#secSeparador">Cápsulas de Café</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="pasteleria.html">Pastelería</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-3 footerCol">
+                    <nav id="ayuda">
+                        <ul class="listaNavFooter">
+                            <h4 class="tituloFooter">¿NECESITÁS AYUDA?</h4>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Convertite en Barista</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Franquicias</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="404.html">Trabaja con Nosotros</a></li>
+                            <li class="listaItemFooter"><a class="linkNavFooter" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12  col-md-3 footerCol">
+                    <h4 class="tituloFooterSocial">SEGUINOS EN LAS REDES</h4>
+                    <a href="404.html" title="Envianos tu consulta por Whatsapp"><i class="fa-brands fa-square-whatsapp btnColor--whatsapp"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook | CoffeeShop"><i class="fa-brands fa-square-facebook btnColor--facebook"></i></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram | CoffeeShop"><i class="fa-brands fa-square-instagram btnColor--instagram"></i></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" title="Youtube | CoffeeShop"><i class="fa-brands fa-youtube btnColor--youtube"></i></a>
+                </div>
+              </div>
+            </div>
+        </footer>
+        <div class="container-fluid divCopyright text-center">
+            <p>© Copyright 2024 COFFEE Shop - Todos los derechos reservados<br>Juan Ignacio Romano | CODERHOUSE - Comisión 53805</p>
+        </div>
+        <script src="../js/bootstrap.bundle.js"></script>
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            window.onscroll = function() {
+                mostrarBotonIrArriba();
+            };
+
+            function mostrarBotonIrArriba() {
+                var botonIrArriba = document.getElementById("btnIrArriba");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    botonIrArriba.style.display = "block";
+                } else {
+                    botonIrArriba.style.display = "none";
+                }
+            }
+
+            document.getElementById("btnIrArriba").addEventListener("click", function() {
+                document.body.scrollTop = 0; // Para navegadores Safari
+                document.documentElement.scrollTop = 0; // Para otros navegadores
+            });
+        </script>
+    </body>
+</html>

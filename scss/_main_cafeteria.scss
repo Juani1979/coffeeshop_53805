@@ -1,0 +1,313 @@
+.mainCafeteria{
+    .seccionTitulo{
+        padding-left: $size-px-3x;
+        padding-top: $size-px-3x;
+        color: $color-marron9;
+        line-height: 1;
+        background-image: url("../assets/img/fondo_cafeteria.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        width: $ancho100;
+        height: 280px;
+    }
+}
+@media screen and (max-width: 768px){
+    .mainCafeteria{
+        .seccionTitulo{
+            padding-left: $size-px-6x;
+            padding-top: $size-px-6x;
+            background-image: url("../assets/img/fondo_cafeteria_peq.jpg");
+            .tituloPrincipal{
+                font-size: $fuente-3-5;
+                margin-top: $size-px-5;
+            }
+            .tituloSecundario{
+                font-size: $fuente-1-8;
+                margin-top: $size-px-5;
+            }     
+        }
+    }
+}
+
+.seccionCardsCafe{
+    width: $ancho80;
+    margin: $size-px-50 auto $size-px-50 auto;
+    /* Menú filtro de Procutos */
+    .menuFiltro{
+        margin-top: -$size-px-80;
+        .navbar{
+            background-color: $color-marron5;
+            color: $color-marron9;
+            padding: $size-px-3;
+            border-radius: $size-px-12;
+        }
+        .navbar-nav{
+            column-gap: $size-px-20;
+            .nav-item{
+                margin: $size-px-5;
+                padding: $size-px-5;
+            }
+            .dropdown-item {
+                text-decoration: none;
+                padding: $size-px-12 $size-px-12;
+                color: $color-marron;
+            }
+            .dropdown-menu{
+                .dropdown-item:hover, .dropdown-item:focus {
+                    color: $color-marron;
+                    background-color: $color-marron8;
+                }
+                .dropdown-item.active, .dropdown-item:active {
+                    color: $color-marron8;
+                    background-color: $color-marron;
+                }
+            }
+        }
+        .nav-link{
+            color: $color-marron9;
+            text-decoration: none;
+            font-size: $fuente-1-2;
+        }
+        .nav-link:active{
+            font-weight: bold;
+        }
+        .btn-filtro{
+            background-color: transparent;
+            color: $color-marron9;
+            font-size: $fuente-1-2;
+            border: none;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .menuFiltro{
+            .navbar-nav{
+                .nav-item{
+                    margin-left: $size-px-80;
+                }
+                .dropdown-toggle{
+                    display: none;
+                }
+            }
+        }
+    }
+    .cardCafe{        
+        height: auto;
+        background-color: $color-marron8;
+        border-radius: $size-px-12;
+        border-color: $color-marron8;
+        margin: $size-px-20 $size-px-10 $size-px-20 $size-px-10;
+        position: relative;
+        .productoNuevo .fa-star{
+            width: 28%;
+            position: absolute;
+            font-size: $fuente-0-7;
+            letter-spacing: 0.05rem;
+            background-color: $color-rojo;
+            color: $color-marron9;
+            margin: 0 $size-px-5 0 $size-px-5;
+            padding: $size-px-7 0 $size-px-7 0;
+            border-radius: $size-px-12;
+            top: 5%;
+            left: 64%;
+        }
+        .productoUltimos .fa-mug-hot{
+            width: 45%;
+            position: absolute;
+            font-size: $fuente-0-5;
+            letter-spacing: 0.06rem;
+            background-color: $color-marron;
+            color: $color-amarillo;
+            margin: 0 $size-px-5 0 $size-px-5;
+            padding: $size-px-7 0 $size-px-7 0;
+            border-radius: $size-px-12;
+            top: 5%;
+            left: 46%;
+        }         
+        .imgCardCafe{
+            width: $ancho100;
+            height: $alto80;
+            border-top-left-radius: $size-px-12;
+            border-top-right-radius: $size-px-12;
+            object-fit: contain;
+            object-fit: cover;
+        }
+        .card-bodyCafe{
+            .tituloCardCafe{
+                font-size: $fuente-1-8;
+                color: $color-marron;
+                font-weight: bold;
+                text-align: left;
+                margin: $size-px-15 0 $size-px-5 $size-px-15;
+            }
+            .txtCardCafe{
+                font-size: $fuente-1-1;
+                color: $color-marron;
+                font-weight: normal;
+                text-align: left;
+                margin: 0 0 $size-px-15 $size-px-25;
+            }         
+            .signoMonedaCardCafe{
+                font-size: $fuente-1-8;
+                background-color: $color-marron4;
+                color: $color-marron8;
+                font-weight: bold;
+                text-align: right;
+            }
+            .monedaCardCafe{
+                font-size: $fuente-2-7;
+                background-color: $color-marron4;
+                color: $color-marron8;
+                text-align: right;
+                padding: $size-px-5 $size-px-10 0 0;
+            }
+            .txtmonedaCardCafe{
+                font-size: $fuente-0-7;
+                background-color: $color-marron4;
+                color: $color-marron8;                
+                font-weight: normal;
+                text-align: right;
+                margin-top: -$size-px-16;
+                padding: 0 $size-px-16 $size-px-10 0;
+            }
+        }
+        .linkCardCafe{
+            box-sizing: content-box;
+            display: inline;
+            display: inline-block;
+            background-color: transparent;
+            width: $ancho100px;
+            color: $color-marron;
+            text-decoration: none;
+            border: $size-px-1 solid $color-marron;
+            font-size: $fuente-1;
+            padding: $size-px-10;
+            margin: $size-px-5 $size-px-5 $size-px-20 $size-px-5;
+        }
+        .linkCardCafe:hover{
+            background-color: $color-marron;
+            color: $color-marron9;
+        }
+    }
+    .cardCafe:hover{
+        box-shadow: 0 0 $size-px-14 $size-px-3menos $color-sombras;
+        .productoNuevo .fa-star{
+            font-size: $fuente-0-8;
+        }
+        .productoUltimos .fa-mug-hot{
+            font-size: $fuente-0-6;
+        }   
+    }
+    /* Ventana off-canvas - Descripción Lateral de Productos */
+    .offcanvas {
+        background-color: $color-marron8;
+    }
+    .offcanvas-header {
+        font-size: $fuente-1-3;
+        .logoPrincipal{
+            width: $ancho-logo;
+        }
+    }
+    .offcanvas-imagen{
+        width: $ancho100;
+        height: auto;
+        border-radius: $size-px-12;
+    }
+    .off-canvas-tituloCard{
+        font-size: $fuente-2-1;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: center;
+        margin:  $size-px-20 0 $size-px-15 $size-px-15;
+    }
+    .off-canvas-tituloCardCafe{
+        font-size: $fuente-1-8;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: left;
+        margin: $size-px-20 0 $size-px-5 $size-px-15;
+    }
+    .off-canvas-txtCardCafe{
+        font-size: $fuente-1-2;
+        color: $color-marron;
+        font-weight: normal;
+        line-height: $fuente-1-3;
+        text-align: justify;
+        margin: $size-px-10 $size-px-15 $size-px-20 $size-px-15;
+    }
+    .off-canvas-productoNuevo{
+        width: 24%;
+        position: absolute;
+        font-size: $fuente-0-7;
+        letter-spacing: 0.05rem;;
+        background-color: $color-rojo;
+        color: $color-marron9;
+        padding: $size-px-7 0 $size-px-7 0;
+        border-radius: $size-px-12;
+        top: 425px;
+        left: 255px;
+    }
+    .off-canvas-productoUltimo{
+        width: $ancho45;
+        position: absolute;
+        font-size: $fuente-0-5;
+        letter-spacing: 0.06rem;;
+        background-color: $color-marron;
+        color: $color-amarillo;
+        padding: $size-px-7 0 $size-px-7 0;
+        border-radius: $size-px-12;
+        top: 425px;
+        left: 180px;
+    }
+    @media screen and (max-width: 768px){
+        .off-canvas-productoNuevo{
+            width: 22%;
+            font-size: $fuente-0-6;
+            top: 427px;
+            left: 275px;    
+        }
+        .off-canvas-productoUltimo{
+            width: 35%;
+            font-size: $fuente-0-4;
+            top: 430px;
+            left: 230px;    
+        }
+    }
+    
+    /* Ventana Modal - FILTRO */
+    .modal-content {
+        background-color: $color-marron8;
+    }
+    .logoModal{
+        width: $ancho-logo-ch;
+    }
+    .modal-body {
+        color: $color-marron;
+        font-size: $fuente-1;
+        .tituloModal{
+            font-size: $fuente-1-3;
+            text-align: left;
+        }
+        .subTituloModal{
+            background-color: $color-marron;
+            color: $color-marron8;
+            font-size: $fuente-1-1;
+            text-align: center;
+            margin-top: $size-px-15;
+            padding: $size-px-5;
+            border-radius: $size-px-12;
+        }
+        .btn-tipoFiltro{
+            background-color: transparent;
+            color:$color-marron;
+            font-size: $fuente-0-8;
+            border: $size-px-1 solid $color-marron;
+            border-radius: $size-px-25;
+            margin: $size-px-3;
+        }
+        .btn-tipoFiltro:hover{
+            background-color: $color-marron;
+            color: $color-marron8;
+        }
+    }
+}

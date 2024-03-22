@@ -1,0 +1,138 @@
+.seccionNosotros{
+    .videoNosotros{
+        width: $ancho95;
+        height: 350px;
+        border-radius: $size-px-12;
+    }
+    .tituloNosotros{
+        font-size: $fuente-2-7;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: left;
+        margin-top: $size-px-10;
+        margin-bottom: $size-px-5;
+    }
+    .subTituloNosotros{
+        font-size: $fuente-1-5;
+        color: $color-marron;
+        font-weight: bold;
+        text-align: left;
+        margin-top: $size-px-10;
+        margin-bottom: $size-px-10;
+    }
+    .txtNosotros{
+        font-size: $fuente-1-1;
+        line-height: 1.3;
+        color: $color-marron;
+        font-weight: normal;
+        text-align: justify;
+        margin: $size-px-5 $size-px-15 $size-px-5 $size-px-15;
+    }
+    .divBotonNosotros {
+        display: flex;
+        justify-content: end;
+        margin: $size-px-30;
+        .linkBotonNosotros{
+            box-sizing: content-box;
+            display: inline-block;
+            background-color:$color-marron;
+            width: 140px;
+            color: $color-marron9;
+            text-decoration: none;
+            border: $size-px-1 solid $color-marron9;
+            border-radius: $size-px-50;
+            font-size: $fuente-1-2;
+            padding: $size-px-18 $size-px-15 $size-px-15 $size-px-15;
+            margin-top: $size-px-10;
+            transition: transform 0.3s ease;
+        }
+        .linkBotonNosotros:hover{
+            background-color: $color-marron5;
+            transform: scale(1.1);
+        }
+    }
+    @media screen and (max-width: 768px){
+        .tituloNosotros{
+            text-align: center;
+            margin-top: $size-px-20;
+        }
+        .subTituloNosotros{
+            text-align: center;
+            margin-bottom: $size-px-30;
+        }
+        .divBotonNosotros {
+            justify-content: center;
+        }
+    }
+    
+    .galeriaFotos{
+        width: $ancho70;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 250px 180px 350px;
+        grid-template-areas: "grilla1 grilla3"
+                             "grilla2 grilla3"
+                             "grilla4 grilla3"
+                             "grilla4 grilla5";
+        gap: $size-px-30;   
+        .g1{
+            grid-area: grilla1;
+        }
+        .g2{
+            grid-area: grilla2;
+        }
+        .g3{
+            grid-area: grilla3;
+            position: relative;
+            .galeriaLogoG3{
+                width: $ancho35;
+                position: absolute;
+                top: $size-px-40;
+                left: $size-px-40;
+            }
+        } 
+        .g4{
+            grid-area: grilla4;
+            position: relative;
+            .galeriaLogoG4{
+                width: $ancho35;
+                position: absolute;
+                bottom: $size-px-40;
+                left: $size-px-40;
+            }
+        }    
+        .g5{
+            grid-area: grilla5;
+        }
+        .g1, .g2, .g3, .g4, .g5 {
+            img{
+                width: $ancho100;
+                height: $alto100;
+                object-fit: cover;
+                border-radius: $size-px-12;
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        .galeriaFotos{
+            width: $ancho85;
+            grid-template-rows: 150px 150px 120px 180px;
+            gap: $size-px-20;
+            .g3{
+                .galeriaLogoG3{
+                    width: $ancho80;
+                    top: $size-px-20;
+                    left: $size-px-20;
+                }
+            }
+            .g4{
+                .galeriaLogoG4{
+                    width: $ancho80;
+                    bottom: $size-px-20;
+                    left: $size-px-20;
+                }
+            }
+        }
+    }
+}
