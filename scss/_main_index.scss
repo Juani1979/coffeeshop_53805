@@ -28,10 +28,8 @@
         margin-top: $size-px-12;
         transition: background 0.3s, color 0.3s;
         &:hover{
-            background-color: $color-marron;
-            border: $size-px-2 solid $color-marron9;
+            background-image: radial-gradient(circle, #553d2a, #6a523e, #7f6853, #957f69, #ab9680);
             transition: background 0.3s, color 0.3s;
-            transform: scale(1.01, 1.01);
             box-shadow: 0 0 $size-px-12 $color-marron9;
         }
     }
@@ -62,7 +60,7 @@
         background-color: $color-marron8;
         border-radius: $size-px-12;
         border-color: $color-marron8;
-        margin: $size-px-80 $size-px-10 $size-px-80 $size-px-10;
+        margin: $size-px-40 $size-px-10 $size-px-80 $size-px-10;
         padding: $size-px-25 $size-px-20 $size-px-10 $size-px-20;
         text-align: center;
         .card-img-top{
@@ -98,11 +96,11 @@
                 font-size: $fuente-1;
                 padding: $size-px-10;
                 margin-top: $size-px-10;
-            }
-            .linkCard:hover{
-                background-color: $color-marron;
-                color: $color-marron9;
-            }
+                &:hover{
+                    background-color: $color-marron;
+                    color: $color-marron9;   
+                }
+            }   
         }
     }
 }
@@ -183,10 +181,8 @@
 
 .cardComentario{
     height: auto;
-    background-color: $color-marron10;
-    border: $size-px-1 solid $color-marron;
+    background-image: linear-gradient(to bottom, #907761, #9a836c, #a48e77, #af9a83, #b9a68f, #c2b199, #ccbba4, #d5c6af, #dfd3bb, #eadfc7, #f4ecd4, #fff9e1);
     border-radius: $size-px-12;
-    border-color: $color-marron;
     margin: $size-px-50 $size-px-5 $size-px-50 $size-px-5;
     padding: $size-px-25 0 $size-px-10 0;
     object-fit: center;

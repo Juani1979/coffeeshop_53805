@@ -78,9 +78,11 @@
         gap: $size-px-30;   
         .g1{
             grid-area: grilla1;
+            position: relative;
         }
         .g2{
             grid-area: grilla2;
+            position: relative;
         }
         .g3{
             grid-area: grilla3;
@@ -104,6 +106,7 @@
         }    
         .g5{
             grid-area: grilla5;
+            position: relative;
         }
         .g1, .g2, .g3, .g4, .g5 {
             img{

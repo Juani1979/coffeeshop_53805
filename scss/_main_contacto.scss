@@ -54,6 +54,7 @@
             padding: $size-px-10;
             margin: $size-px-15 $size-px-5 $size-px-5 $size-px-5;
             cursor: pointer;
+            transition: background-color 1s ease, color 1s ease;
         }
         .botonForm:hover{
             background-color: $color-marron;

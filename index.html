@@ -8,12 +8,13 @@
         <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
         <header class="header position-sticky top-0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img class="logoPrincipal" src="./assets/img/logo_coffeeShop.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></a>
+                    <a class="navbar-brand" href="index.html"><img class="logoPrincipal" src="./assets/img/logo_coffeeShop.png" alt="Logo de COFFEE SHOP" title="CoffeeShop"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></i>
                     </button>
@@ -47,6 +48,24 @@
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div>
+        </header>
+        <main>
+            <section class="seccionTitulo d-flex d-md-flex flex-column">
+                <h1 class="tituloPrincipal animate__animated animate__fadeInUpBig animate__delay-1s">Despertá tus sentidos</h1>
+                <p class="tituloSecundario animate__animated animate__fadeInUpBig animate__delay-2s">¡Tentate con nuestros sabores!</p>
+                <div class="wrapper">
+                    <a class="buttonCafe animate__animated animate__fadeInUpBig animate__delay-3s" href="#secSeparador" style="color: #fff9e1;">DESCUBRILOS AQUÍ</a>
+                </div>
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </section>
+
             <script>
                 function move() {
                   var elem = document.getElementById("myBar");
@@ -68,13 +87,6 @@
                   move();
                 };
             </script>
-        </header>
-        <main>
-            <section class="seccionTitulo d-flex d-md-flex flex-column">
-                <h1 class="tituloPrincipal">Despertá tus sentidos</h1>
-                <p class="tituloSecundario">¡Tentate con nuestros sabores!</p>
-                <a class="linkDescubrir rounded-pill text-center" href="#secSeparador">DESCUBRILOS AQUÍ</a>
-            </section>
 
             <section id="secSeparador">
                 <div class="divSeparador"></div>
@@ -90,9 +102,19 @@
                             <div class="card">
                                 <img src="./assets/img/foto_cafeteria.jpg" class="card-img-top" alt="Ingresá la Cafetería">
                                 <div class="card-body">
-                                  <h4 class="card-title">Cafetería</h4>
-                                  <p class="card-text">Un lugar, donde cada taza cuenta una historia. <br>Disfruta de aromáticos cafés y de un ambiente cálido para compartir momentos especiales. Contamos con un ambiente relajado para que puedas relajarte, trabajar ó estudiar.</p>
-                                  <a class="linkCard rounded-pill text-center" href="./pages/cafeteria.html">Ingresar</a>
+                                    <h4 class="card-title">Cafetería</h4>
+                                    <p class="card-text">Un lugar, donde cada taza cuenta una historia. <br>Disfruta de aromáticos cafés y de un ambiente cálido para compartir momentos especiales. Contamos con un ambiente relajado para que puedas relajarte, trabajar ó estudiar.</p>
+                                    <div class="wrapper">
+                                        <a class="buttonCafe" href="./pages/cafeteria.html" style="color: #fff9e1;">Ingresar</a>
+                                    </div>
+                                    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -100,9 +122,19 @@
                             <div class="card">
                                 <img src="./assets/img/foto_pasteleria.jpg" class="card-img-top" alt="Ingresá a la Pasteleria">
                                 <div class="card-body">
-                                  <h4 class="card-title">Pastelería</h4>
-                                  <p class="card-text">Sumergite en un mundo de delicias dulces en nuestra pastelería. Desde exquisitos pasteles hasta tentadores postres, cada bocado es una experiencia única. Descubre la mezcla perfecta de sabores y texturas que harán que vuelvas por más.</p>
-                                  <a class="linkCard rounded-pill text-center" href="./pages/pasteleria.html">Ingresar</a>
+                                    <h4 class="card-title">Pastelería</h4>
+                                    <p class="card-text">Sumergite en un mundo de delicias dulces en nuestra pastelería. Desde exquisitos pasteles hasta tentadores postres, cada bocado es una experiencia única. Descubre la mezcla perfecta de sabores y texturas que harán que vuelvas por más.</p>
+                                    <div class="wrapper">
+                                        <a class="buttonCafe" href="./pages/pasteleria.html" style="color: #fff9e1;">Ingresar</a>
+                                    </div>
+                                    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -110,15 +142,78 @@
                             <div class="card">
                                 <img src="./assets/img/foto_capsulas.jpg" class="card-img-top" alt="Ingresá a las Cápsulas de Café">
                                 <div class="card-body">
-                                  <h4 class="card-title">Cápsulas de Café</h4>
-                                  <p class="card-text">Explora la variedad de aromas y sabores en cada cápsula de café. Nuestras cápsulas cuidadosamente seleccionadas ofrecen una experiencia de café excepcional en la comodidad de tu hogar. Descubre una nueva dimensión en el arte del café con nuestras exclusivas mezclas.</p>
-                                  <a class="linkCard rounded-pill text-center" href="./pages/cafeteria.html#secSeparador">Ingresar</a>
+                                    <h4 class="card-title">Cápsulas de Café</h4>
+                                    <p class="card-text">Explora la variedad de aromas y sabores en cada cápsula de café. Nuestras cápsulas cuidadosamente seleccionadas ofrecen una experiencia de café excepcional en la comodidad de tu hogar. Descubre una nueva dimensión en el arte del café con nuestras exclusivas mezclas.</p>
+                                    <div class="wrapper">
+                                        <a class="buttonCafe" href="./pages/cafeteria.html#secSeparador" style="color: #fff9e1;">Ingresar</a>
+                                    </div>
+                                    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                 </div>
                             </div>    
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class="seccionCards">
+                <h2 class="tituloSeccion">NUEVOS PRODUCTOS</h2>
+                <hr class="lineaTitulos"/>
+            </section>            
+<section class="nuevosProductos">
+    <div class="containerNuevo">
+        <div class="box">
+          <div class="imgBx">
+            <img src="./assets/img/cafe_coco.jpg">
+          </div>
+          <div class="content">
+            <div> 
+              <h2><i class="fa-solid fa-star nuevoProd"> NUEVO</i><br>Coconut Flavour</h2>
+              <p>Coco con un toque de vainilla<br><a class="linkComprarCafe rounded-pill text-center" href="./pages/404.html">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="./assets/img/cafe_india.jpg">
+          </div>
+          <div class="content">
+            <div>
+              <h2><i class="fa-solid fa-star nuevoProd"> NUEVO</i><br>Café India</h2>
+              <p>Potente y Especiado de Origen<br><a class="linkComprarCafe rounded-pill text-center" href="./pages/404.html">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="./assets/img/cafe_spices.jpg">
+          </div>
+          <div class="content">
+            <div>
+              <h2><i class="fa-solid fa-star nuevoProd"> NUEVO</i><br>Delight Spices</h2>
+              <p>Especias & Vinoso<br><a class="linkComprarCafe rounded-pill text-center" href="./pages/404.html">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="./assets/img/cafe_indonesia.jpg">
+          </div>
+          <div class="content">
+            <div>
+              <h2><i class="fa-solid fa-star nuevoProd"> NUEVO</i><br>Café Indonesia</h2>
+              <p>Café rico y amaderado de Origen<br><a class="linkComprarCafe rounded-pill text-center" href="./pages/404.html">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
             
             <section class="seccionBarista" id="seccionBarista">
                 <h2 class="tituloSeccion">HACÉ TU MEJOR ESPRESSO</h2>
@@ -169,7 +264,7 @@
                 <hr class="lineaTitulos"/>
 
                 <div class="container">
-                    <div class="row">
+                    <div class="row pt-5">
                         <div class="col-md-6 d-flex align-items-center justify-content-center">
                             <div class="card mb-3"> 
                                 <div class="row g-0"> 
@@ -178,15 +273,24 @@
                                     </div> 
                                     <div class="col-md-6"> 
                                         <div class="card-body"> 
-                                            <p class="card-title">¿Cómo hacer tu pedido?</p> 
+                                            <p class="card-title mt-2">¿Cómo hacer tu pedido?</p> 
                                             <p class="card-text mb-2"> 
                                                 Ingresá a nuestra plataforma de forma fácil y rápida para realizar tus pedidos. Sigue sencillos pasos y explora nuestro catálogo de productos.  
                                             </p>
-                                            <div class="text-center align-items-end"> 
-                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Hacer mi Pedido</a>
+                                            <div class="text-center align-items-end mt-4"> 
+                                                <div class="wrapper">
+                                                    <a class="buttonCafe" href="./pages/404.html" style="color: #fff9e1;">Hacer mi Pedido</a>
+                                                </div>
+                                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                                        </filter>
+                                                    </defs>
+                                                </svg>
                                             </div>
                                         </div>
-                                         
                                     </div> 
                                 </div> 
                             </div>
@@ -199,12 +303,22 @@
                                     </div> 
                                     <div class="col-md-6"> 
                                         <div class="card-body"> 
-                                            <p class="card-title">¿Te gustan los Macarons?</p> 
+                                            <p class="card-title mt-2">¿Te gustan los Macarons?</p> 
                                             <p class="card-text mb-2"> 
                                                 Descubre nuestras deliciosas opciones y encuentra el pack perfecto para llevar. Desde clásicos sabores hasta creaciones exclusivas, nuestros Macarons te sorprenderán. Además, aprovecha nuestras increíbles promociones que harán que tu experiencia sea aún más dulce.  
                                             </p>
-                                            <div class="text-center align-items-end"> 
-                                                <a class="linkCard rounded-pill text-center" href="./pages/404.html">Comprar Packs</a>
+                                            <div class="text-center align-items-end mt-4">
+                                                <div class="wrapper">
+                                                    <a class="buttonCafe" href="./pages/404.html" style="color: #fff9e1;">Comprar Packs</a>
+                                                </div>
+                                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                                        </filter>
+                                                    </defs>
+                                                </svg>
                                             </div>
                                         </div>
                                          
@@ -224,7 +338,17 @@
                     <div class="row align-items-center">
                         <div class="col-12 col-md-3 text-center cardComentarioContainer"> 
                             <div class="cardComentario">
-                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_maria.jpg" alt="Foto de nuestro Usuario">
+        
+                                <div class="containerExp">
+                                    <div class="boxExp">
+                                        <div class="spin-container">
+                                            <div class="shape">
+                                                <div class="bd"><img src="./assets/img/foto_maria.jpg" alt="Foto de nuestro Usuario"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                   <p class="tituloComentario">María</p>
                                   <p class="subtituloComentario">Amante del Café y los Postres</p>
@@ -234,7 +358,17 @@
                         </div>
                         <div class="col-12 col-md-3 text-center cardComentarioContainer">
                             <div class="cardComentario">
-                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_carlos.jpg" alt="Foto de nuestro Usuario">
+                                
+                                <div class="containerExp">
+                                    <div class="boxExp">
+                                        <div class="spin-container">
+                                            <div class="shape">
+                                                <div class="bd"><img src="./assets/img/foto_carlos.jpg" alt="Foto de nuestro Usuario"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                     <p class="tituloComentario">Carlos</p>
                                     <p class="subtituloComentario">Fanático de los Sabores Únicos</p>
@@ -244,7 +378,17 @@
                         </div>
                         <div class="col-12 col-md-3 text-center cardComentarioContainer">
                             <div class="cardComentario">
-                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_ana.jpg" alt="Foto de nuestro Usuario">
+                                
+                                <div class="containerExp">
+                                    <div class="boxExp">
+                                        <div class="spin-container">
+                                            <div class="shape">
+                                                <div class="bd"><img src="./assets/img/foto_ana.jpg" alt="Foto de nuestro Usuario"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                     <p class="tituloComentario">Ana</p>
                                     <p class="subtituloComentario">Lugar Perfecto para Reuniones</p>
@@ -254,7 +398,17 @@
                         </div>
                         <div class="col-12 col-md-3 text-center cardComentarioContainer">
                             <div class="cardComentario">
-                                <img class="rounded-circle card-img-top mx-auto imgComentario" src="./assets/img/foto_javier.jpg" alt="Foto de nuestro Usuario">
+                                
+                                <div class="containerExp">
+                                    <div class="boxExp">
+                                        <div class="spin-container">
+                                            <div class="shape">
+                                                <div class="bd"><img src="./assets/img/foto_javier.jpg" alt="Foto de nuestro Usuario"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                     <p class="tituloComentario">Javier</p>
                                     <p class="subtituloComentario">Cliente Frecuente y Satisfecho</p>

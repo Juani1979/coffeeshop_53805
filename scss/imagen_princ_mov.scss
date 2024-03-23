@@ -1,0 +1,139 @@
+.nuevosProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+}
+.containerNuevo {
+    position: relative;
+    width: $ancho100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+    border-radius: $size-px-12;
+}
+.containerNuevo .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: $color-marron;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: $size-px-15;
+    margin-top: $size-px-45;
+    border-radius: $size-px-12;
+}
+.containerNuevo:hover .box {
+    transform: rotateY(25deg);
+}
+.containerNuevo .box:hover ~ .box {
+    transform: rotateY(-25deg);
+}
+.containerNuevo .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 $size-px-25 $size-px-40 rgba(0,0,0,0.5);
+}
+.containerNuevo .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $ancho100;
+    height: $ancho100;
+}
+.containerNuevo .box .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $ancho100;
+    height: $ancho100;
+    background: linear-gradient(180deg,$color-marron9,$color-marron);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+}
+.containerNuevo .box:hover .imgBx:before {
+    opacity: 1;
+}
+.containerNuevo .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $ancho100;
+    height: $ancho100;
+    object-fit: cover;
+}
+.containerNuevo .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $ancho100;
+    height: $ancho100;
+    z-index: 1;
+    display: flex;
+    padding: 0 0 $size-px-5 $size-px-20;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+.containerNuevo .box .content h2 {
+    color: $color-marron9;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: $size-px-5;
+    font-size: $size-px-20;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+.containerNuevo .box:hover .content h2 {
+    transform: translateY(0px);
+}
+.containerNuevo .box .content .nuevoProd {
+    color: $color-amarillo;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: $size-px-5;
+    font-size: 0.7rem;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+.containerNuevo .box:hover .content .nuevoProd {
+    transform: translateY(0px);
+}
+.containerNuevo .box .content p {
+    color: $color-marron9;
+    transition: 0.5s;
+    font-size: $size-px-14  ;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+}
+.containerNuevo .box:hover .content p {
+    transform: translateY(0px);
+}
+
+.containerNuevo .box:hover .content {
+    transform: translateY(0px);
+}
+.linkComprarCafe{
+    box-sizing: content-box;
+    display: inline;
+    display: inline-block;
+    background-color: transparent;
+    width: 65px;
+    color: $color-marron9;
+    text-decoration: none;
+    border: $size-px-1 solid $color-marron9;
+    font-size: $fuente-1;
+    padding: $size-px-5;
+    margin: $size-px-5 $size-px-5 0 0;
+    transition: background-color 1s ease, color 1s ease;            
+}
+.linkComprarCafe:hover{
+    background-color: $color-marron4;
+    color: $color-marron9;
+}

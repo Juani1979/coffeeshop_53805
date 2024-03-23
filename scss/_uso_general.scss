@@ -146,6 +146,7 @@
     text-align: center;
     padding: $size-px-10;
     margin-top: $size-px-10;
+    transition: background-color 1s ease, color 1s ease;
 }
 .linkError:hover{
     background-color: $color-marron;
@@ -187,6 +188,7 @@
     border-radius: $ancho50;
     padding: $size-px-10 $size-px-15;
     cursor: pointer;
+    transition: background-color 1s ease, color 1s ease;
 }
 
 #btnIrArriba:hover {
@@ -194,6 +196,7 @@
     color: $color-marron8;
 }
 
+/*Barra de progreso*/
 .progress-container {
     width: $ancho100;
 }

@@ -98,6 +98,11 @@
         border-color: $color-marron8;
         margin: $size-px-20 $size-px-10 $size-px-20 $size-px-10;
         position: relative;
+        .contenedorImg{
+            border-top-left-radius: $size-px-12;
+            border-top-right-radius: $size-px-12;
+            overflow: hidden;
+        }
         .productoNuevo .fa-star{
             width: 28%;
             position: absolute;
@@ -129,8 +134,11 @@
             height: $alto80;
             border-top-left-radius: $size-px-12;
             border-top-right-radius: $size-px-12;
-            object-fit: contain;
             object-fit: cover;
+            transition: transform 3s ease;    
+            &:hover{
+                transform: scale(1.2);
+            }
         }
         .card-bodyCafe{
             .tituloCardCafe{
@@ -183,21 +191,26 @@
             font-size: $fuente-1;
             padding: $size-px-10;
             margin: $size-px-5 $size-px-5 $size-px-20 $size-px-5;
+            transition: background-color 1s ease, color 1s ease;            
         }
         .linkCardCafe:hover{
             background-color: $color-marron;
             color: $color-marron9;
         }
     }
+    
     .cardCafe:hover{
         box-shadow: 0 0 $size-px-14 $size-px-3menos $color-sombras;
         .productoNuevo .fa-star{
-            font-size: $fuente-0-8;
+            transition: transform 3s ease;
+            transform: scale(1.1);
         }
         .productoUltimos .fa-mug-hot{
-            font-size: $fuente-0-6;
-        }   
+            transition: transform 3s ease;
+            transform: scale(1.1);
+        }
     }
+
     /* Ventana off-canvas - Descripción Lateral de Productos */
     .offcanvas {
         background-color: $color-marron8;
