@@ -1,9 +1,7 @@
 /* Título de Secciones */
 .tituloSeccion{
-    color: $color-marron;
-    text-align: center;
-    font-size: $fuente-3;
-    padding-top: $size-px-50;
+    // Se aplica un mixin
+    @include texto-titSeccion;
 }
 .lineaTitulos{
     width: 120px;
@@ -127,10 +125,20 @@
     padding-bottom: $size-px-15;
 }
 .subtituloSeccionError{
-    color: $color-marron;
-    text-align: center;
-    font-size: $fuente-1-2;
-    padding-bottom: $size-px-50;
+    padding-bottom: $size-px-10;
+    p{
+        color: $color-marron;
+        text-align: center;
+        font-size: $fuente-1-2;
+        margin-bottom: $size-px-5;
+    }
+    span{
+        color: $color-marron;
+        text-align: center;
+        font-size: $fuente-1-2;
+        margin-bottom: $size-px-5;
+        font-weight: bold;
+    }
 }
 .linkError{
     box-sizing: content-box;

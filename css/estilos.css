@@ -7,45 +7,7 @@
 /* Ancho Logotipo */
 /*Iconos Redes Sociales con MAPS y EACH*/
 /* Sección Copyright */
-/*** BOTON ESTILOS BOTÓN GROW SKEW ***/
-/*<a href="#" class="ov-btn-grow-skew">BTN GROW SKEW</a>*/
-/*** ESTILOS BOTÓN GROW SKEW ***/
-.ov-btn-grow-skew {
-  background: #fff; /* color de fondo */
-  color: #4741d7; /* color de fuente */
-  border: 2px solid #4741d7; /* tamaño y color de borde */
-  padding: 16px 20px;
-  border-radius: 25px; /* redondear bordes */
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.ov-btn-grow-skew:hover {
-  color: #fff; /* color de fuente hover */
-}
-
-.ov-btn-grow-skew::after {
-  content: "";
-  background: #4741d7; /* color de fondo hover */
-  position: absolute;
-  z-index: -1;
-  padding: 16px 20px;
-  display: block;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  transform: skewX(-45deg) scale(0, 1);
-  transition: all 0.3s ease;
-}
-
-.ov-btn-grow-skew:hover::after {
-  transition: all 0.3s ease-out;
-  transform: skewX(-45deg) scale(1, 1);
-}
-
+/* Definición del MIXIN */
 * {
   margin: 0;
   padding: 0;
@@ -483,10 +445,20 @@ body {
 }
 
 .subtituloSeccionError {
+  padding-bottom: 10px;
+}
+.subtituloSeccionError p {
   color: #553d2a;
   text-align: center;
   font-size: 1.2rem;
-  padding-bottom: 50px;
+  margin-bottom: 5px;
+}
+.subtituloSeccionError span {
+  color: #553d2a;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .linkError {
@@ -842,18 +814,43 @@ body {
     padding-right: 20%;
   }
 }
+.seccionNosotros .nuestraHistoriaDiv {
+  background-image: linear-gradient(to bottom, #c7b69f, #ccbca5, #d1c2ab, #d7c9b1, #dccfb7, #e1d4bc, #e5dac2, #eadfc7, #efe5cd, #f4ecd4, #faf2da, #fff9e1);
+  padding: 50px;
+  border-radius: 12px;
+}
+.seccionNosotros .nuestraHistoriaDiv .nuestraHistoria .tituloHistoria {
+  color: #553d2a;
+  text-align: left;
+  font-size: 2.1rem;
+  font-weight: 500 bold;
+}
+.seccionNosotros .nuestraHistoriaDiv .nuestraHistoria p {
+  color: #553d2a;
+  text-align: justify;
+  font-size: 1.3rem;
+  margin: 5px 25px 5px 25px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.seccionNosotros .nuestraHistoriaDiv .nuestraHistoria span {
+  color: #553d2a;
+  text-align: justify;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 .seccionNosotros .videoNosotros {
   width: 95%;
   height: 350px;
   border-radius: 12px;
 }
 .seccionNosotros .tituloNosotros {
-  font-size: 2.7rem;
+  font-size: 2.1rem;
   color: #553d2a;
   font-weight: bold;
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 .seccionNosotros .subTituloNosotros {
   font-size: 1.5rem;
@@ -865,11 +862,26 @@ body {
 }
 .seccionNosotros .txtNosotros {
   font-size: 1.1rem;
-  line-height: 1.3;
+  line-height: 1.1;
   color: #553d2a;
   font-weight: normal;
   text-align: justify;
-  margin: 5px 15px 5px 15px;
+  margin: 5px 15px 15px 15px;
+}
+.seccionNosotros .txtNosotros p {
+  color: #553d2a;
+  text-align: justify;
+  font-size: 1.3rem;
+  margin: 5px 25px 5px 25px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.seccionNosotros .txtNosotros span {
+  color: #553d2a;
+  text-align: justify;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 .seccionNosotros .divBotonNosotros {
   display: flex;
@@ -1362,7 +1374,7 @@ body {
 }
 
 .seccionContacto .tituloContacto {
-  font-size: 2.7rem;
+  font-size: 2.1rem;
   color: #553d2a;
   font-weight: bold;
   text-align: center;
@@ -1596,15 +1608,29 @@ body {
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding: 10px;
+  }
+  .footerPrincipal .listaNavFooter {
+    padding: initial;
   }
   .footerPrincipal .logoFotter {
     margin: 10px;
   }
   .footerPrincipal .container {
-    width: 50%;
+    width: 65%;
+  }
+  .footerPrincipal .tituloFooter {
+    text-align: center;
   }
   .footerPrincipal .tituloFooterSocial {
+    text-align: center;
+  }
+  .footerPrincipal .footerCol .txtFooter {
+    text-align: center;
+  }
+  .footerPrincipal .footerCol .txtFooter1 {
+    text-align: center;
+  }
+  .footerPrincipal .listaNavFooter {
     text-align: center;
   }
 }

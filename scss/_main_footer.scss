@@ -87,14 +87,30 @@
         margin: 0 auto;
         align-items: center;
         text-align: center;
-        padding: $size-px-10;
+        .listaNavFooter{
+            padding: initial;
+        }
         .logoFotter{
             margin: $size-px-10;
         }
         .container{
-            width: $ancho50;
+            width: $ancho65;
+        }
+        .tituloFooter{
+            text-align: center;
         }
         .tituloFooterSocial{
+            text-align: center;
+        }
+        .footerCol{
+            .txtFooter{
+                text-align: center;
+            }
+            .txtFooter1{
+                text-align: center;
+            }
+        }
+        .listaNavFooter{
             text-align: center;
         }
     }
