@@ -110,11 +110,3 @@ $estilosCopyright:(
     paddingTop: $size-px-18,
     paddingBottom: $size-px-3,
 );
-
-/* Definición del MIXIN */
-@mixin texto-titSeccion {
-  color: $color-marron;
-  text-align: center;
-  font-size: $fuente-3;
-  padding-top: $size-px-50;
-}

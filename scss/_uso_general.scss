@@ -1,7 +1,7 @@
 /* Título de Secciones */
 .tituloSeccion{
     // Se aplica un mixin
-    @include texto-titSeccion;
+    @include texto-titSeccion($color-marron, $fuente-3, $size-px-50);
 }
 .lineaTitulos{
     width: 120px;

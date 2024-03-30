@@ -1,0 +1,8 @@
+/* Definición del MIXIN */
+@mixin texto-titSeccion($color-marron, $fuente-3, $size-px-50){
+    color: $color-marron;
+    text-align: center;
+    font-size: $fuente-3;
+    padding-top: $size-px-50;
+  }
+  
