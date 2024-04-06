@@ -10,6 +10,28 @@
         <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
+
+        <script>
+            function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                clearInterval(id);
+                setTimeout(function() {
+                    elem.style.display = 'none';
+                }, 1000);
+                } else {
+                width++;
+                elem.style.width = width + '%';
+                }
+            }
+            }
+            window.onload = function() {
+            move();
+            };
+        </script>
     </head>
     <body>
         <header class="header position-sticky top-0">
@@ -49,28 +71,17 @@
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div>
-            <script>
-                function move() {
-                var elem = document.getElementById("myBar");
-                var width = 1;
-                var id = setInterval(frame, 10);
-                function frame() {
-                    if (width >= 100) {
-                    clearInterval(id);
-                    setTimeout(function() {
-                        elem.style.display = 'none';
-                    }, 1000);
-                    } else {
-                    width++;
-                    elem.style.width = width + '%';
-                    }
-                }
-                }
-                window.onload = function() {
-                move();
-                };
-            </script>
         </header>
+
+        <div class="promotion-window" id="promotionWindow">
+            <img class="imgPromo" src="../assets/img/past_lemonpie.jpg" alt="Tarta Limón Merengue">
+            <div>
+                <p class="tituloPromo">Tarta Limón Merengue</p>
+                <p class="subTituloPromo">¡Solo por HOY disfrutá un 2x1!</p>
+                <a class="linkBotonCafe rounded-pill text-center" href="404.html">Comprar</a>
+            </div>
+            <span class="close-button" onclick="closePromotion()">X</span>
+        </div>
 
         <main class="mainCafeteria">
             <section class="seccionTitulo">
@@ -95,7 +106,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Tiramisú Éxtasis</h3>
                                     <p class="txtCardCafe">Cremoso y embriagador</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2300</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.300</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -129,7 +140,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Cheesecake Frutas Frescas</h3>
                                     <p class="txtCardCafe">Dulce y refrescante</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2500</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.500</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -163,7 +174,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Brownie Intenso</h3>
                                     <p class="txtCardCafe">Chocolate denso y suave</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2100</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.100</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -197,7 +208,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Tarta Manzana Especiada</h3>
                                     <p class="txtCardCafe">Sabor casero único</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2600</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.600</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -231,7 +242,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Éclair Caramelo Salado</h3>
                                     <p class="txtCardCafe">Dulce y salado perfecto</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2450</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.450</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -265,7 +276,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Cupcake Red Velvet</h3>
                                     <p class="txtCardCafe">Elegancia roja y suave</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2200</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.200</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -296,7 +307,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Croissant Almendra</h3>
                                     <p class="txtCardCafe">Delicadeza crujiente</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.700</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -330,7 +341,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Roll de Canela Tentador</h3>
                                     <p class="txtCardCafe">Esencia acogedora</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2300</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.300</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -364,7 +375,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Tarta Limón Merengue</h3>
                                     <p class="txtCardCafe">Acidez y dulzura divinas</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.800</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -395,7 +406,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Macarons Variados</h3>
                                     <p class="txtCardCafe">Pequeñas delicias exquisitas</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2500</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>2.500</p>
                                     <p class="txtmonedaCardCafe">Precio por porción</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -511,6 +522,12 @@
                 document.body.scrollTop = 0; // Para navegadores Safari
                 document.documentElement.scrollTop = 0; // Para otros navegadores
             });
+        </script>
+        <script>
+            // Función para cerrar la ventana de promoción
+            function closePromotion() {
+                document.getElementById('promotionWindow').style.display = 'none';
+            }
         </script>
     </body>
 </html>

@@ -538,6 +538,68 @@ body {
   background-color: #907761;
 }
 
+/* Ventana de Promoción */
+.promotion-window {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff9e1;
+  color: #553d2a;
+  border-radius: 5px;
+  border: 1px solid #553d2a;
+  margin: 15px;
+  width: 310px;
+  z-index: 2;
+}
+.promotion-window .imgPromo {
+  width: 130px;
+  height: 90px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  float: left;
+  margin-right: 10px;
+}
+.promotion-window .tituloPromo {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.promotion-window .subTituloPromo {
+  color: #e7190b;
+  margin-top: -12px;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+.promotion-window:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.promotion-window .linkBotonCafe {
+  box-sizing: content-box;
+  display: inline;
+  display: inline-block;
+  background-color: transparent;
+  width: 100px;
+  color: #553d2a;
+  text-decoration: none;
+  border: 1px solid #553d2a;
+  font-size: 0.8rem;
+  padding: 5px;
+  margin: 5px 5px 5px 20px;
+  transition: background-color 1s ease, color 1s ease;
+}
+.promotion-window .linkBotonCafe:hover {
+  background-color: #553d2a;
+  color: #fff9e1;
+}
+
+.close-button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+
 .header {
   background-color: #553d2a;
   z-index: 1000;

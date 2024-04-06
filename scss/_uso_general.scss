@@ -214,3 +214,64 @@
     height: $size-px-3;
     background-color: $color-marron5;
 }
+
+/* Ventana de Promoción */
+.promotion-window {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $color-marron9;
+    color: $color-marron;
+    border-radius: $size-px-5;
+    border: $size-px-1 solid $color-marron;
+    margin: $size-px-15;
+    width: 310px;
+    z-index: 2;
+    .imgPromo{
+        width: 130px;
+        height: 90px;
+        border-radius: $size-px-5;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        float: left;
+        margin-right: $size-px-10;
+    }
+    .tituloPromo{
+        padding-top: $size-px-10;
+        font-size: $size-px-18;
+        font-weight: bold;
+    }
+    .subTituloPromo{
+        color: $color-rojo;
+        margin-top: -12px;
+        margin-bottom: $size-px-3;
+        font-size: $size-px-15;
+    }
+    &:hover{
+        box-shadow: 0 0 $size-px-20 rgba(0, 0, 0, 0.5);
+    }
+    .linkBotonCafe{
+        box-sizing: content-box;
+        display: inline;
+        display: inline-block;
+        background-color: transparent;
+        width: $ancho100px;
+        color: $color-marron;
+        text-decoration: none;
+        border: $size-px-1 solid $color-marron;
+        font-size: $fuente-0-8;
+        padding: $size-px-5;
+        margin: $size-px-5 $size-px-5 $size-px-5 $size-px-20;
+        transition: background-color 1s ease, color 1s ease;            
+    }
+    .linkBotonCafe:hover{
+        background-color: $color-marron;
+        color: $color-marron9;
+    }
+}
+.close-button {
+    position: absolute;
+    top: $size-px-7;
+    right: $size-px-7;
+    cursor: pointer;
+}

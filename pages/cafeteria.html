@@ -10,6 +10,28 @@
         <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
+
+        <script>
+            function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                clearInterval(id);
+                setTimeout(function() {
+                    elem.style.display = 'none';
+                }, 1000);
+                } else {
+                width++;
+                elem.style.width = width + '%';
+                }
+            }
+            }
+            window.onload = function() {
+            move();
+            };
+        </script>
     </head>
     <body>
         <header class="header position-sticky top-0">
@@ -49,28 +71,17 @@
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div>
-            <script>
-                function move() {
-                var elem = document.getElementById("myBar");
-                var width = 1;
-                var id = setInterval(frame, 10);
-                function frame() {
-                    if (width >= 100) {
-                    clearInterval(id);
-                    setTimeout(function() {
-                        elem.style.display = 'none';
-                    }, 1000);
-                    } else {
-                    width++;
-                    elem.style.width = width + '%';
-                    }
-                }
-                }
-                window.onload = function() {
-                move();
-                };
-            </script>
         </header>
+
+        <div class="promotion-window" id="promotionWindow">
+            <img class="imgPromo" src="../assets/img/cafeteria_flat_white.jpg" alt="Café Indonesia">
+            <div>
+                <p class="tituloPromo">Flat White Sedoso</p>
+                <p class="subTituloPromo">¡Solo por HOY disfrutá un 2x1!</p>
+                <a class="linkBotonCafe rounded-pill text-center" href="404.html">Comprar</a>
+            </div>
+            <span class="close-button" onclick="closePromotion()">X</span>
+        </div>
 
         <main class="mainCafeteria">
             <section class="seccionTitulo">
@@ -169,7 +180,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Espresso Puro</h3>
                                     <p class="txtCardCafe">Intenso y robusto</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1200</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.200</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -200,7 +211,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Cappuccino Suave</h3>
                                     <p class="txtCardCafe">Equilibrio perfecto</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1500</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.500</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -234,7 +245,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Latte Vainilla</h3>
                                     <p class="txtCardCafe">Suavidad con toque dulce</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.800</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -268,7 +279,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Mocha Intenso</h3>
                                     <p class="txtCardCafe">Chocolate y café fundidos</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.700</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -299,7 +310,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Americano Clásico</h3>
                                     <p class="txtCardCafe">Simple y reconfortante</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1250</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.250</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -330,7 +341,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Flat White Sedoso</h3>
                                     <p class="txtCardCafe">Textura cremosa</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1700</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.700</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -361,7 +372,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Macchiato Caramel</h3>
                                     <p class="txtCardCafe">Caramelo con carácter</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1900</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.900</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -395,7 +406,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Cold Brew Refrescante</h3>
                                     <p class="txtCardCafe">Café frío, energía fresca</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1800</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>1.800</p>
                                     <p class="txtmonedaCardCafe">Precio por unidad</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -446,7 +457,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café Brasil</h3>
                                     <p class="txtCardCafe">Intenso y robusto de Origen</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11.990</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -480,7 +491,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Caramello</h3>
                                     <p class="txtCardCafe">Café con aroma a caramelo</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>12490</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>12.490</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -514,7 +525,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Coconut Flavour</h3>
                                     <p class="txtCardCafe">Coco con un toque de vainilla</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13550</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13.550</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -548,7 +559,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café Colombia</h3>
                                     <p class="txtCardCafe">Café frutal y vibrante de Origen</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13.190</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -582,7 +593,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café Etiopia</h3>
                                     <p class="txtCardCafe">Café poderoso y contrastante de Origen</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>10790</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>10.790</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -619,7 +630,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café India</h3>
                                     <p class="txtCardCafe">Potente y Especiado de Origen</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13.190</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -656,7 +667,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café Indonesia</h3>
                                     <p class="txtCardCafe">Café rico y amaderado de Origen</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13190</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13.190</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -693,7 +704,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Café Lungo</h3>
                                     <p class="txtCardCafe">Café dulce y delicado - Lungo</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11.990</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -727,7 +738,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">París</h3>
                                     <p class="txtCardCafe">Cereales y galletas, con un toque cítrico</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11990</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>11.990</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a>
 
@@ -761,7 +772,7 @@
                                 <div class="card-bodyCafe">
                                     <h3 class="tituloCardCafe">Delight Spices</h3>
                                     <p class="txtCardCafe">Especias & Vinoso</p>
-                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13550</p>
+                                    <p class="monedaCardCafe"><span class="signoMonedaCardCafe">$ </span>13.550</p>
                                     <p class="txtmonedaCardCafe">Precio por 1 sleeve (10 cápsulas)</p>
                                     <a class="linkCardCafe rounded-pill text-center" href="404.html">Comprar</a> 
 
@@ -881,6 +892,12 @@
                 document.body.scrollTop = 0; // Para navegadores Safari
                 document.documentElement.scrollTop = 0; // Para otros navegadores
             });
+        </script>
+        <script>
+            // Función para cerrar la ventana de promoción
+            function closePromotion() {
+                document.getElementById('promotionWindow').style.display = 'none';
+            }
         </script>
     </body>
 </html>

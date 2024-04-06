@@ -11,6 +11,28 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/estilos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <script>
+            function move() {
+              var elem = document.getElementById("myBar");
+              var width = 1;
+              var id = setInterval(frame, 10);
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                  setTimeout(function() {
+                    elem.style.display = 'none';
+                  }, 1000);
+                } else {
+                  width++;
+                  elem.style.width = width + '%';
+                }
+              }
+            }
+            window.onload = function() {
+              move();
+            };
+        </script>
     </head>
     <body>
         <header class="header position-sticky top-0">
@@ -67,28 +89,6 @@
                     </defs>
                 </svg>
             </section>
-
-            <script>
-                function move() {
-                  var elem = document.getElementById("myBar");
-                  var width = 1;
-                  var id = setInterval(frame, 10);
-                  function frame() {
-                    if (width >= 100) {
-                      clearInterval(id);
-                      setTimeout(function() {
-                        elem.style.display = 'none';
-                      }, 1000);
-                    } else {
-                      width++;
-                      elem.style.width = width + '%';
-                    }
-                  }
-                }
-                window.onload = function() {
-                  move();
-                };
-            </script>
 
             <section id="secSeparador">
                 <div class="divSeparador"></div>

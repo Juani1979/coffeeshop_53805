@@ -10,6 +10,28 @@
         <script src="https://kit.fontawesome.com/92ab279d80.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
+
+        <script>
+            function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                clearInterval(id);
+                setTimeout(function() {
+                    elem.style.display = 'none';
+                }, 1000);
+                } else {
+                width++;
+                elem.style.width = width + '%';
+                }
+            }
+            }
+            window.onload = function() {
+            move();
+            };
+        </script>
     </head>
     <body>
         <header class="header position-sticky top-0">
@@ -49,27 +71,6 @@
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div>
-            <script>
-                function move() {
-                var elem = document.getElementById("myBar");
-                var width = 1;
-                var id = setInterval(frame, 10);
-                function frame() {
-                    if (width >= 100) {
-                    clearInterval(id);
-                    setTimeout(function() {
-                        elem.style.display = 'none';
-                    }, 1000);
-                    } else {
-                    width++;
-                    elem.style.width = width + '%';
-                    }
-                }
-                }
-                window.onload = function() {
-                move();
-                };
-            </script>
         </header> 
 
         <main class="mainCafeteria">
