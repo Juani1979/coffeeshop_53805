@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
-@import 'variables';
-@import 'mixines'; /*Contiene Titulos de Sección con MIXIN*/
+@import './variables/variables_colores';
+@import './variables/variables_fuentes';
+@import './variables/variables_alto_ancho';
+@import './variables/variables_margenes';
+@import './variables/variables';
+@import './funciones/mixines'; /*Contiene Titulos de Sección con MIXIN*/
 @import 'reset';
-@import 'imagen_princ_mov';
-@import 'botones_anim';
-@import 'experiencias_anim';
-@import 'uso_general';
+@import './animaciones/imagen_princ_mov';
+@import './animaciones/botones_anim';
+@import './animaciones/experiencias_anim';
+@import './general/uso_general';
 @import 'header';
-@import 'main_index';
-@import 'main_nosotros';
-@import 'galeria_nosotros';
-@import 'main_cafeteria';
-@import 'main_contacto';
-@import 'main_footer'; /*Contiene Iconos Redes Sociales con MAPS y EACH*/
+@import './main/main_index';
+@import './main/main_nosotros';
+@import './animaciones/galeria_nosotros';
+@import './main/main_cafeteria';
+@import './main/main_contacto';
+@import './main/main_footer'; /*Contiene Iconos Redes Sociales con MAPS y EACH*/

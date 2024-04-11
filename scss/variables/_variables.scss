@@ -1,0 +1,21 @@
+/* Ancho Logotipo */
+$ancho-logo: 170px;
+$ancho-logo-ch: 120px;
+
+/*Iconos Redes Sociales con MAPS y EACH*/
+$redes: (
+    facebook: #3a5795,
+    instagram: #dd2a7b,  
+    youtube: #c4302b,
+    whatsapp: #25D366
+);
+
+/* Sección Copyright */
+$estilosCopyright:(
+    bgColor: $color-marron,
+    fontSize: $fuente-1,
+    letterSpacing: 0.03rem,
+    color: $color-marron8,
+    paddingTop: $size-px-18,
+    paddingBottom: $size-px-3,
+);

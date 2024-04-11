@@ -3,7 +3,7 @@
  * 9 |     width: $ancho100;
  *   |            ^^^^^^^^^
  *   '
- *   scss\imagen_princ_mov.scss 9:12  root stylesheet */
+ *   scss\animaciones\imagen_princ_mov.scss 9:12  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 9 \2502      width: $ancho100;\d\a   \2502             ^^^^^^^^^\a   \2575 \a   scss\\imagen_princ_mov.scss 9:12  root stylesheet";
+  content: "Error: Undefined variable.\a   \2577 \a 9 \2502      width: $ancho100;\d\a   \2502             ^^^^^^^^^\a   \2575 \a   scss\\animaciones\\imagen_princ_mov.scss 9:12  root stylesheet";
 }
