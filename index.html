@@ -100,7 +100,7 @@
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 tarjetaPrincipal">
                             <div class="card">
                                 <img src="./assets/img/foto_cafeteria.jpg" class="card-img-top" alt="Ingresá la Cafetería">
                                 <div class="card-body">
@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 tarjetaPrincipal">
                             <div class="card">
                                 <img src="./assets/img/foto_pasteleria.jpg" class="card-img-top" alt="Ingresá a la Pasteleria">
                                 <div class="card-body">
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 tarjetaPrincipal">
                             <div class="card">
                                 <img src="./assets/img/foto_capsulas.jpg" class="card-img-top" alt="Ingresá a las Cápsulas de Café">
                                 <div class="card-body">
@@ -232,34 +232,44 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4 class="tituloBarista">Receta para una taza</h4>
-                            <p class="txtBarista">
-                                Café: <b>10 gramos</b><br>                    
-                                Agua: <b>40 ml.</b><br>
-                                Relación de café/agua: <b>1:4 g/ml.</b><br>
-                                Tamaño de molienda: <b>fina</b><br>
-                                Tiempo de preparación: <b>1 minuto</b><br><br>
-                            </p>
+                            <p class="txtBarista">- Café: <span class="txtBaristaNeg">10 gramos.</span></p>                    
+                            <p class="txtBarista">- Agua: <span class="txtBaristaNeg">40 ml.</span></p>
+                            <p class="txtBarista">- Relación de café/agua: <span class="txtBaristaNeg">1:4 g/ml.</span></p>
+                            <p class="txtBarista">- Tamaño de molienda: <span class="txtBaristaNeg">fina.</span></p>
+                            <p class="txtBarista">- Tiempo de preparación: <span class="txtBaristaNeg">1 minuto.</span></p>
+                            
                             <h4 class="tituloBarista">Seguí estos pasos</h4>
-                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 1</b></p>
-                            <p class="txtBarista">A moler el café! Hay que tener en cuenta que si la molienda es muy gruesa el agua pasará demasiado rápido, obteniendo entonces un café de baja extracción con sabores poco definidos, plano/vacio y sin retrogusto.<br>
-                            Por el contrario, si se muele demasiado fino se compactará y el agua casi no podrá pasar, dando lugar a un café sobre extraído que resultará amargo, seco, astringente.<br>
-                            Un buen molido para espresso debería permitir extraer una taza de café en 25 segundos.</p><br>
-                            
-                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 2</b></p>
-                            <p class="txtBarista">Una vez molido el café, utilizá el tamper para comprimirlo y que quede homogéneo en el portafiltro.<br>
-                            No es necesario presionar increíblemente fuerte, solo lo suficiente para sellar el café de manera uniforme.<br>
-                            Podés darle al tamper un giro suave. Esto suavizará o "pulirá" la base para una extracción homogénea.</p><br>
-                            
-                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 3</b></p>
-                            <p class="txtBarista">Colocá el portafiltro en la cafetera. Previo a extraer el café, "purgar" el grupo permitiendo quitar el agua sobrecalentada. Si seguiste todos los pasos anteriores, a los pocos segundos empezarás a ver las primeras gotas de café.</p><br>
-                            
-                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 4</b></p>
-                            <p class="txtBarista">Estas primeras gotas deberán tener un color avellana y una textura como la miel, denominada crema que aparece en la superficie adornando tu café.<br>
-                            Al moverla y cortarla con la cuchara, se cierra de nuevo ella misma.<br>
-                            Tardarás aproximadamente 25 segundos para obtener el espresso perfecto.</p><br>
-                            
-                            <p class="txtBarista"><i class="fa-solid fa-circle-check iconoSocial"></i>&nbsp;&nbsp;<b>PASO 5</b></p>
-                            <p class="txtBarista">Ahora si ya podemos disfrutar de nuestro café!!</p>
+
+                            <div class="parrafoCafe">
+                                <p><i class="fa-solid fa-circle-check iconoSocial"></i><span class="tituloPasos">PASO 1</span></p>
+                                <p class="txtBaristaPeq">A moler el café! Hay que tener en cuenta que si la molienda es muy gruesa el agua pasará demasiado rápido, obteniendo entonces un café de baja extracción con sabores poco definidos, plano/vacio y sin retrogusto.</p>
+                                <p class="txtBaristaPeq">Por el contrario, si se muele demasiado fino se compactará y el agua casi no podrá pasar, dando lugar a un café sobre extraído que resultará amargo, seco, astringente.</p>
+                                <p class="txtBaristaPeq">Un buen molido para espresso debería permitir extraer una taza de café en 25 segundos.</p>
+                            </div>
+
+                            <div class="parrafoCafe">
+                                <p><i class="fa-solid fa-circle-check iconoSocial"></i><span class="tituloPasos">PASO 2</span></p>
+                                <p class="txtBaristaPeq">Una vez molido el café, utilizá el tamper para comprimirlo y que quede homogéneo en el portafiltro.</p>
+                                <p class="txtBaristaPeq">No es necesario presionar increíblemente fuerte, solo lo suficiente para sellar el café de manera uniforme.</p>
+                                <p class="txtBaristaPeq">Podés darle al tamper un giro suave. Esto suavizará o "pulirá" la base para una extracción homogénea.</p>
+                            </div>
+
+                            <div class="parrafoCafe">
+                                <p><i class="fa-solid fa-circle-check iconoSocial"></i><span class="tituloPasos">PASO 3</span></p>
+                                <p class="txtBaristaPeq">Colocá el portafiltro en la cafetera. Previo a extraer el café, "purgar" el grupo permitiendo quitar el agua sobrecalentada. Si seguiste todos los pasos anteriores, a los pocos segundos empezarás a ver las primeras gotas de café.</p>
+                            </div>
+
+                            <div class="parrafoCafe">
+                                <p><i class="fa-solid fa-circle-check iconoSocial"></i><span class="tituloPasos">PASO 4</span></p>
+                                <p class="txtBaristaPeq">Estas primeras gotas deberán tener un color avellana y una textura como la miel, denominada crema que aparece en la superficie adornando tu café.</p>
+                                <p class="txtBaristaPeq">Al moverla y cortarla con la cuchara, se cierra de nuevo ella misma.</p>
+                                <p class="txtBaristaPeq">Tardarás aproximadamente 25 segundos para obtener el espresso perfecto.</p>
+                            </div>
+
+                            <div class="parrafoCafe">
+                                <p><i class="fa-solid fa-circle-check iconoSocial"></i><span class="tituloPasos">PASO 5</span></p>
+                                <p class="txtBaristaPeq">Ahora si ya podemos disfrutar de nuestro café!!</p>
+                            </div>
                         </div>
                     </div>
                 </div>

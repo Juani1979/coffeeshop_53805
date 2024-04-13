@@ -712,6 +712,12 @@ body {
   margin: 50px auto 50px auto;
   text-align: center;
 }
+.seccionCards .tarjetaPrincipal {
+  transition: transform 0.3s ease;
+}
+.seccionCards .tarjetaPrincipal:hover {
+  transform: translateY(-5px);
+}
 .seccionCards .card {
   height: auto;
   background-color: #e3d7bf;
@@ -726,6 +732,11 @@ body {
   height: auto;
   border-radius: 12px;
   margin-top: -50px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.seccionCards .card .card-img-top:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
+  transform: translateY(-5px);
 }
 .seccionCards .card .card-body {
   min-height: 230px;
@@ -769,6 +780,10 @@ body {
   object-fit: cover;
   border-radius: 12px;
   margin-top: 30px;
+  transition: box-shadow 0.3s ease;
+}
+.seccionBarista .imgBarista:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
 }
 .seccionBarista .tituloBarista {
   font-size: 1.8rem;
@@ -778,14 +793,35 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+.seccionBarista .tituloPasos {
+  font-size: 1.5rem;
+  color: #553d2a;
+  font-weight: bold;
+  margin-left: 10px;
+}
 .seccionBarista .txtBarista {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: #553d2a;
   font-weight: normal;
   text-align: left;
   margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 7px;
+}
+.seccionBarista .txtBaristaNeg {
+  font-weight: bold;
+}
+.seccionBarista .txtBaristaPeq {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  text-align: justify;
+  color: #553d2a;
+  font-weight: normal;
+  margin: 5px 30px 7px 30px;
+}
+.seccionBarista .parrafoCafe {
+  margin: 25px 0 25px 0;
 }
 
 .seccionTarjetasX2 {
@@ -924,7 +960,7 @@ body {
   margin-bottom: 10px;
 }
 .seccionNosotros .txtNosotros {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.1;
   color: #553d2a;
   font-weight: normal;
@@ -1479,6 +1515,23 @@ body {
   justify-content: flex-end;
   margin: 0 30px 0 30px;
 }
+.seccionContacto .formularioContacto .botonFormBorrar {
+  width: 120px;
+  background-color: transparent;
+  color: #e7190b;
+  border: 1px solid #e7190b;
+  border-radius: 25px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  margin: 15px 5px 5px 5px;
+  cursor: pointer;
+  transition: background-color 1s ease, color 1s ease;
+}
+.seccionContacto .formularioContacto .botonFormBorrar:hover {
+  background-color: #e7190b;
+  color: #fff9e1;
+}
 .seccionContacto .formularioContacto .botonForm {
   width: 120px;
   background-color: transparent;
@@ -1506,8 +1559,14 @@ body {
 .seccionPreguntas {
   width: 100%;
 }
-.seccionPreguntas .accordion-button .collapsed {
+.seccionPreguntas .accordion-button {
   font-size: 1.2rem;
+  color: #553d2a;
+}
+.seccionPreguntas .accordion-body {
+  font-size: 1.1rem;
+}
+.seccionPreguntas .accordion-button .collapsed {
   color: #553d2a;
 }
 .seccionPreguntas .accordion-button:not(.collapsed) {
@@ -1537,12 +1596,12 @@ body {
   text-align: left;
 }
 .footerPrincipal .listaNavFooter .listaItemFooter {
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 .footerPrincipal .listaNavFooter .listaItemFooter .linkNavFooter {
   color: #fff9e1;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .footerPrincipal .listaNavFooter .listaItemFooter .linkNavFooter:hover {
   color: #553d2a;

@@ -43,6 +43,23 @@
             justify-content: flex-end;
             margin: 0 $size-px-30 0 $size-px-30;
         }
+        .botonFormBorrar{
+            width: 120px;
+            background-color: transparent;
+            color: $color-rojo;
+            border: $size-px-1 solid $color-rojo;
+            border-radius: $size-px-25;
+            font-size: $fuente-1;
+            text-align: center;
+            padding: $size-px-10;
+            margin: $size-px-15 $size-px-5 $size-px-5 $size-px-5;
+            cursor: pointer;
+            transition: background-color 1s ease, color 1s ease;
+        }
+        .botonFormBorrar:hover{
+            background-color: $color-rojo;
+            color: $color-marron9;
+        }
         .botonForm{
             width: 120px;
             background-color: transparent;
@@ -71,8 +88,14 @@
 
 .seccionPreguntas{
     width: $ancho100;
-    .accordion-button .collapsed {
+    .accordion-button{
         font-size: $fuente-1-2;
+        color: $color-marron;
+    }
+    .accordion-body{
+        font-size: $fuente-1-1;
+    }
+    .accordion-button .collapsed {
         color: $color-marron;
     }
     .accordion-button:not(.collapsed) {
